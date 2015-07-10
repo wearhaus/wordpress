@@ -4,7 +4,10 @@
  * navbar.css based on Bootstrap
  *
  */
-
+.blog-title{
+    font-family: "Lato", arial, sans-serif;
+    
+}
 .navbar {
         background: rgba(0, 0, 0, 0.7); /* make background translucent */
         font-family: "Lato", arial, sans-serif;
@@ -39,6 +42,10 @@
 
 .navbar-brand { /* CSS for Wearhaus logo */
     padding: 5px 15px;
+}
+
+#searchbar {
+    padding-top:15px;
 }
 
 /*a {

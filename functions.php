@@ -1,8 +1,7 @@
 <?php
 /*
- *  Author: Todd Motto | @toddmotto
- *  URL: html5blank.com | @html5blank
- *  Custom functions, support, custom post types and more.
+ *  Author: Hari Subbaraj
+ *  Custom functions, support, custom post types and more for wearhaus blog
  */
 
 /*------------------------------------*\
@@ -227,7 +226,7 @@ function html5wp_index($length) // Create 20 Word Callback for Index page Excerp
 }
 
 // Create 40 Word Callback for Custom Post Excerpts, call using html5wp_excerpt('html5wp_custom_post');
-function html5wp_custom_post($length)
+function wearhauswp_custom_post($length)
 {
     return 40;
 }
@@ -250,10 +249,10 @@ function html5wp_excerpt($length_callback = '', $more_callback = '')
 }
 
 // Custom View Article link to Post
-function html5_blank_view_article($more)
+function wearhaus_view_article($more)
 {
     global $post;
-    return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'html5blank') . '</a>';
+    return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'wearhaus') . '</a>';
 }
 
 // Remove Admin bar
@@ -347,7 +346,7 @@ add_action('wp_print_scripts', 'html5blank_conditional_scripts'); // Add Conditi
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'html5blank_styles'); // Add Theme Stylesheet
 add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
-add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
+add_action('init', 'create_post_type_wearhaus'); // Add our HTML5 Blank Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
 
@@ -377,7 +376,7 @@ add_filter('wp_nav_menu_args', 'my_wp_nav_menu_args'); // Remove surrounding <di
 add_filter('the_category', 'remove_category_rel_from_category_list'); // Remove invalid rel attribute
 add_filter('the_excerpt', 'shortcode_unautop'); // Remove auto <p> tags in Excerpt (Manual Excerpts only)
 add_filter('the_excerpt', 'do_shortcode'); // Allows Shortcodes to be executed in Excerpt (Manual Excerpts only)
-add_filter('excerpt_more', 'html5_blank_view_article'); // Add 'View Article' button instead of [...] for Excerpts
+add_filter('excerpt_more', 'wearhaus_view_article'); // Add 'View Article' button instead of [...] for Excerpts
 add_filter('show_admin_bar', 'remove_admin_bar'); // Remove Admin bar
 add_filter('style_loader_tag', 'html5_style_remove'); // Remove 'text/css' from enqueued stylesheet
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
@@ -393,30 +392,47 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 // Shortcodes above would be nested like this -
 // [html5_shortcode_demo] [html5_shortcode_demo_2] Here's the page title! [/html5_shortcode_demo_2] [/html5_shortcode_demo]
 
+
 /*------------------------------------*\
-	Custom Post Types
+	ShortCode Functions
 \*------------------------------------*/
 
-// Create 1 Custom Post type for a Demo, called HTML5-Blank
-function create_post_type_html5()
+// Shortcode Demo with Nested Capability
+function html5_shortcode_demo($atts, $content = null)
 {
-    register_taxonomy_for_object_type('category', 'html5-blank'); // Register Taxonomies for Category
-    register_taxonomy_for_object_type('post_tag', 'html5-blank');
+    return '<div class="shortcode-demo">' . do_shortcode($content) . '</div>'; // do_shortcode allows for nested Shortcodes
+}
+
+// Shortcode Demo with simple <h2> tag
+function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
+{
+    return '<h2>' . $content . '</h2>';
+}
+
+/*------------------------------------*\
+    Custom Post Types
+\*------------------------------------*/
+
+// Create WEARHAUS CUSTOM POSTS
+function create_post_type_wearhaus()
+{
+    register_taxonomy_for_object_type('category', 'wearhaus'); // Register Taxonomies for Category
+    register_taxonomy_for_object_type('post_tag', 'wearhaus');
     register_post_type('html5-blank', // Register Custom Post Type
         array(
         'labels' => array(
-            'name' => __('HTML5 Blank Custom Post', 'html5blank'), // Rename these to suit
-            'singular_name' => __('HTML5 Blank Custom Post', 'html5blank'),
-            'add_new' => __('Add New', 'html5blank'),
-            'add_new_item' => __('Add New HTML5 Blank Custom Post', 'html5blank'),
-            'edit' => __('Edit', 'html5blank'),
-            'edit_item' => __('Edit HTML5 Blank Custom Post', 'html5blank'),
-            'new_item' => __('New HTML5 Blank Custom Post', 'html5blank'),
-            'view' => __('View HTML5 Blank Custom Post', 'html5blank'),
-            'view_item' => __('View HTML5 Blank Custom Post', 'html5blank'),
-            'search_items' => __('Search HTML5 Blank Custom Post', 'html5blank'),
-            'not_found' => __('No HTML5 Blank Custom Posts found', 'html5blank'),
-            'not_found_in_trash' => __('No HTML5 Blank Custom Posts found in Trash', 'html5blank')
+            'name' => __('Wearhaus Custom Post', 'wearhaus'), // Rename these to suit
+            'singular_name' => __('Wearhaus Custom Post', 'wearhaus'),
+            'add_new' => __('Add New', 'wearhaus'),
+            'add_new_item' => __('Add New Wearhaus Custom Post', 'wearhaus'),
+            'edit' => __('Edit', 'wearhaus'),
+            'edit_item' => __('Edit Wearhaus Custom Post', 'wearhaus'),
+            'new_item' => __('New Wearhaus Custom Post', 'wearhaus'),
+            'view' => __('View Wearhaus Custom Post', 'wearhaus'),
+            'view_item' => __('View Wearhaus Custom Post', 'wearhaus'),
+            'search_items' => __('Search Wearhaus Custom Post', 'wearhaus'),
+            'not_found' => __('No Wearhaus Custom Posts found', 'wearhaus'),
+            'not_found_in_trash' => __('No Wearhaus Custom Posts found in Trash', 'wearhaus')
         ),
         'public' => true,
         'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
@@ -435,22 +451,7 @@ function create_post_type_html5()
     ));
 }
 
-/*------------------------------------*\
-	ShortCode Functions
-\*------------------------------------*/
-
-// Shortcode Demo with Nested Capability
-function html5_shortcode_demo($atts, $content = null)
-{
-    return '<div class="shortcode-demo">' . do_shortcode($content) . '</div>'; // do_shortcode allows for nested Shortcodes
-}
-
-// Shortcode Demo with simple <h2> tag
-function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
-{
-    return '<h2>' . $content . '</h2>';
-}
-/*
+/*-----------------------------------------------------------------------------------------------------------------------------
                                     ADDING BOOTSTRAP + CUSTOM CSS
 -------------------------------------------------------------------------------------------------------------------------------
 */
@@ -463,6 +464,8 @@ function custom_css() {
     wp_enqueue_style('footer_css', get_template_directory_uri() . '/css/footer.css');
     //blog-navbar css
     wp_enqueue_style('blog-navbar_css', get_template_directory_uri() . '/css/blog-navbar.css');
+    //searchbar css
+    wp_enqueue_style('searchbar_css', get_template_directory_uri() . '/css/searchbar.css');
     /*base css
      wp_enqueue_style('base_css', get_template_directory_uri() . '/css/base.css');
      wp_enqueue_styel('base_css', get_template_directory_uri() . '/css/base.css')
