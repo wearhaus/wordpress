@@ -36,15 +36,15 @@
 
 			<!-- header -->
 			<header class="header clear" role="banner">
-    <!--        <div class = "gen-navbar">
+           <div class = "gen-navbar">
 				<div class="container">
 					<div class="row">
 					<div class="col-md-12">
-					<!-- GENERAL NAV 
+					<!-- GENERAL NAV -->
 					<nav class="navbar navbar-default navbar-fixed-top">
         			
         				<div class="container">
-            			<!-- Brand and toggle get grouped for better mobile display 
+            			<!-- Brand and toggle get grouped for better mobile display -->
             				<div class="navbar-header">
                 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                    					<span class="sr-only">Toggle navigation</span>
@@ -57,7 +57,7 @@
                 				</a>
             				</div>
 
-            			<!-- Collect the nav links, forms, and other content for toggling 
+            			<!-- Collect the nav links, forms, and other content for toggling -->
             				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 				<ul class="nav navbar-nav navbar-right">
                   				  <li class="hidden">
@@ -77,16 +77,15 @@
                     				</li>
                 				</ul>
             				</div>
-            				<!-- /.navbar-collapse 
+            				<!-- /.navbar-collapse -->
         				</div>
         			
-        			<!-- /.container-fluid 
+        			<!-- /.container-fluid -->
     				</nav>
     			</div>
     			</div>
     			</div> 
-            </div>
-        -->     
+            </div>    
         <div>
             <div class="container-fluid">
                 <div class="row-fluid">
@@ -96,45 +95,47 @@
                 </div>
             </div>
         </div>
-                <nav class="blog-navbar">
-                    <div class="blog-navbar">
-                        <div class="container-fluid">
-    				        <div class="row-fluid">
-    					       <div class="col-md-10">
-					               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                        <ul class="nav navbar-nav navbar-left blognav">
-                                            <li class="hidden">
-                                                <a href="#page-top"></a>
-                                            </li>
-                                            <li class="page-scroll">
-                                                <a href="blog.html">Recent</a>
-                                            </li>
-                                            <li class="page-scroll">
-                                                <a href="contact.html">Artists</a>
-                                            </li>
-                                            <li class="page-scroll">
-                                                <a href="mailinglist.html">Product Updates</a>
-                                            </li>
-                                            <li>
-                                               <a href="store.html">Events</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="navbar-header">
-                				        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                   					        <span class="sr-only">Toggle navigation</span>
-                   					        <span class="icon-bar"></span>
-                 			                <span class="icon-bar"></span>
-                    				        <span class="icon-bar"></span>
-                				        </button>
-                                    </div>
-                                </div>
-                                <div class="col-md-2" id ="searchbar">
-                                    <?php include (TEMPLATEPATH . '/searchform.php'); ?>
-                                </div>
-                            </div>            
+        <nav class="blog-navbar">
+            <div class="blog-navbar">
+                <div class="container-fluid">
+    				<div class="row-fluid">
+    				    <div class="col-md-10">
+				            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav navbar-left blognav">
+                                    <li class="hidden">
+                                        <a href="#page-top"></a>
+                                    </li>
+                                    <li class="page-scroll">
+                                        <a href="blog.html">Recent</a>
+                                    </li>
+                                    <li class="page-scroll">
+                                        <a href="contact.html">Artists</a>
+                                    </li>
+                                    <li class="page-scroll">
+                                        <a href="mailinglist.html">Product Updates</a>
+                                    </li>
+                                    <li>
+                                       <a href="store.html">Events</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="navbar-header">
+                				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                   					<span class="sr-only">Toggle navigation</span>
+                   					<span class="icon-bar"></span>
+                 			        <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                			    </button>
+                            </div>
                         </div>
-				    </div>
-                </nav>
-			</header>
-			<!-- /header -->
+                        <!-- searchbar -->
+                        <div class="col-md-2" id ="searchbar">
+                            <?php include (TEMPLATEPATH . '/searchform.php'); ?>
+                        </div>
+                        <!-- /searchbar -->
+                    </div>            
+                </div>
+			</div>
+        </nav>
+	</header>
+<!-- /header -->
