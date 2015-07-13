@@ -15,14 +15,13 @@
   font-size: 10pt;
   float: left;
   color: #000;
-  margin-top: 10px;
+  margin-top: -5px;
   margin-left: 5px;
   padding-left: 35px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   color: #000;
- 
   -webkit-transition: width .55s ease;
   -moz-transition: width .55s ease;
   -ms-transition: width .55s ease;
@@ -50,20 +49,21 @@
   position: absolute;
   top: 50%;
   margin-left: 17px;
-  margin-top: 17px;
+  margin-top: 2px;
   z-index: 1;
-  color: #4f5b66;
+  /*Gray Search Icon
+  color: #4f5b66;*/
+  color:black;
 }
 .container-2 input#search:focus, .container-2 input#search:active{
   outline:none;
-  width: 1000px;
-  ont-style: #000;
+  width: 100px;
 }
  
 .container-2:hover input#search{
-width: 300px;
+width: 200px;
 }
  
 .container-2:hover .icon{
-  color: blue;
+   color: #4f5b66;
 }

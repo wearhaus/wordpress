@@ -54,7 +54,7 @@ if (function_exists('add_theme_support'))
     add_theme_support('automatic-feed-links');
 
     // Localisation Support
-    load_theme_textdomain('html5blank', get_template_directory() . '/languages');
+    load_theme_textdomain('wearhaus', get_template_directory() . '/languages');
 }
 
 /*------------------------------------*\
@@ -219,14 +219,15 @@ function html5wp_pagination()
     ));
 }
 
+
 // Custom Excerpts
 function html5wp_index($length) // Create 20 Word Callback for Index page Excerpts, call using html5wp_excerpt('html5wp_index');
 {
     return 20;
 }
 
-// Create 40 Word Callback for Custom Post Excerpts, call using html5wp_excerpt('html5wp_custom_post');
-function wearhauswp_custom_post($length)
+// Create 40 Word Callback for Custom Post Excerpts, call using html5wp_excerpt('wearhauswp_custom_post');
+function html5wp_custom_post($length)
 {
     return 40;
 }
@@ -418,7 +419,7 @@ function create_post_type_wearhaus()
 {
     register_taxonomy_for_object_type('category', 'wearhaus'); // Register Taxonomies for Category
     register_taxonomy_for_object_type('post_tag', 'wearhaus');
-    register_post_type('html5-blank', // Register Custom Post Type
+    register_post_type('wearhaus', // Register Custom Post Type
         array(
         'labels' => array(
             'name' => __('Wearhaus Custom Post', 'wearhaus'), // Rename these to suit

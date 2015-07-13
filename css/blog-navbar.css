@@ -1,0 +1,12 @@
+.blog-navbar {
+	text-decoration: none;
+	background-color: #EDEDEC;
+	color: black;
+}
+
+.blognav a{
+	color: #000;
+	font-weight: 900;
+	text-transform: uppercase;
+	 font-family: "Lato", arial, sans-serif;
+}

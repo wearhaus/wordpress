@@ -7,6 +7,9 @@
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
         <link href="<?php echo get_template_directory_uri(); ?>/img/logo_white_transparent_high_res.png" rel="shortcut icon">
         <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
+
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
         
         <!--  CUSTOM FONT LATO -->
     	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
@@ -33,14 +36,15 @@
 
 			<!-- header -->
 			<header class="header clear" role="banner">
+    <!--        <div class = "gen-navbar">
 				<div class="container">
 					<div class="row">
 					<div class="col-md-12">
-					<!-- GENERAL NAV -->
+					<!-- GENERAL NAV 
 					<nav class="navbar navbar-default navbar-fixed-top">
         			
         				<div class="container">
-            			<!-- Brand and toggle get grouped for better mobile display -->
+            			<!-- Brand and toggle get grouped for better mobile display 
             				<div class="navbar-header">
                 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                    					<span class="sr-only">Toggle navigation</span>
@@ -53,7 +57,7 @@
                 				</a>
             				</div>
 
-            			<!-- Collect the nav links, forms, and other content for toggling -->
+            			<!-- Collect the nav links, forms, and other content for toggling 
             				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 				<ul class="nav navbar-nav navbar-right">
                   				  <li class="hidden">
@@ -73,59 +77,64 @@
                     				</li>
                 				</ul>
             				</div>
-            				<!-- /.navbar-collapse -->
+            				<!-- /.navbar-collapse 
         				</div>
         			
-        			<!-- /.container-fluid -->
+        			<!-- /.container-fluid 
     				</nav>
     			</div>
     			</div>
-    			</div>
-    			<div class="blog-navbar">
-    				<div class="container">
-    					<div class="row">
-    						<div class="col-md-12">
-					<!-- /GENERAL NAV -->
-					<nav class="blog-navbar">
-						<row class="col-md-12">
-						<div class="container">
-							<div class="navbar-header">
-                				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                   					<span class="sr-only">Toggle navigation</span>
-                   					<span class="icon-bar"></span>
-                 				   	<span class="icon-bar"></span>
-                    				<span class="icon-bar"></span>
-                				</button>
-                				<a class="navbar-brand" href="index.html">
-                					<img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo_white_transparent_high_res.png" alt="brand"/>
-                				</a>
-            				</div>
-
-            			<!-- Collect the nav links, forms, and other content for toggling -->
-            				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                				<ul class="nav navbar-nav navbar-right">
-                  				  	<li class="hidden">
-                        				<a href="#page-top"></a>
-                    				</li>
-                    				<li class="page-scroll">
-                        				<a href="blog.html">Recenet</a>
-                    				</li>
-                    				<li class="page-scroll">
-                        				<a href="contact.html">Artists</a>
-                    				</li>
-                    				<li class="page-scroll">
-                        				<a href="mailinglist.html">Product Updates</a>
-                    				</li>
-                    				<li>
-                        				<a href="store.html">Events</a>
-                    				</li>
-                				</ul>
-            				</div>
-						</div>
-					</row>
-					</nav>
-				</div>
-			</div>
-				</div>
+    			</div> 
+            </div>
+        -->     
+        <div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="col-md-12">
+                        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/navbar_img_placeholder.png" alt="blog-pic">
+                    </div>
+                </div>
+            </div>
+        </div>
+                <nav class="blog-navbar">
+                    <div class="blog-navbar">
+                        <div class="container-fluid">
+    				        <div class="row-fluid">
+    					       <div class="col-md-10">
+					               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                        <ul class="nav navbar-nav navbar-left blognav">
+                                            <li class="hidden">
+                                                <a href="#page-top"></a>
+                                            </li>
+                                            <li class="page-scroll">
+                                                <a href="blog.html">Recent</a>
+                                            </li>
+                                            <li class="page-scroll">
+                                                <a href="contact.html">Artists</a>
+                                            </li>
+                                            <li class="page-scroll">
+                                                <a href="mailinglist.html">Product Updates</a>
+                                            </li>
+                                            <li>
+                                               <a href="store.html">Events</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="navbar-header">
+                				        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                   					        <span class="sr-only">Toggle navigation</span>
+                   					        <span class="icon-bar"></span>
+                 			                <span class="icon-bar"></span>
+                    				        <span class="icon-bar"></span>
+                				        </button>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" id ="searchbar">
+                                    <?php include (TEMPLATEPATH . '/searchform.php'); ?>
+                                </div>
+                            </div>            
+                        </div>
+				    </div>
+                </nav>
 			</header>
 			<!-- /header -->
