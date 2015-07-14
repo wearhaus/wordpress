@@ -5,8 +5,8 @@
 		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
-        <link href="<?php echo get_template_directory_uri(); ?>/img/logo_white_transparent_high_res.png" rel="shortcut icon">
-        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
+        <link href="<?php echo get_template_directory_uri(); ?>/img/favicon2.png" rel="shortcut icon">
+        <link href="<?php echo get_template_directory_uri(); ?>/img/favicon2.png" rel="apple-touch-icon-precomposed">
 
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -32,70 +32,80 @@
 	<body <?php body_class(); ?>>
 
 		<!-- wrapper -->
-		<div class="wrapper">
+		<div class = "gen-navbar">
+                <div class="container-fluid">
+                    <div class="row-fluid">
+                    <div class="col-md-12">
+                    <!-- GENERAL NAV -->
+                    <nav class="navbar navbar-default">
+                    
+                        <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="index.html">
+                                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo_white_transparent_high_res.png" alt="brand"/>
+                                </a>
+                            </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav navbar-right">
+                                  <li class="hidden">
+                                    <a href="#page-top"></a>
+                                    </li>
+                                    <li class="page-scroll">
+                                        <a href="blog.html">Blog</a>
+                                    </li>
+                                    <li class="page-scroll">
+                                        <a href="contact.html">Contact</a>
+                                    </li>
+                                    <li class="page-scroll">
+                                        <a href="mailinglist.html">Mailing List</a>
+                                    </li>
+                                    <li>
+                                        <a href="store.html">Buy Now!</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /.navbar-collapse -->
+                        </div>
+                    
+                    <!-- /.container-fluid -->
+                    </nav>
+                </div>
+                </div>
+                </div> 
+            </div> 
+        <div class="container">
 
 			<!-- header -->
-			<header class="header clear" role="banner">
-           <div class = "gen-navbar">
-				<div class="container">
-					<div class="row">
-					<div class="col-md-12">
-					<!-- GENERAL NAV -->
-					<nav class="navbar navbar-default navbar-fixed-top">
-        			
-        				<div class="container">
-            			<!-- Brand and toggle get grouped for better mobile display -->
-            				<div class="navbar-header">
-                				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                   					<span class="sr-only">Toggle navigation</span>
-                   					<span class="icon-bar"></span>
-                 				   	<span class="icon-bar"></span>
-                    				<span class="icon-bar"></span>
-                				</button>
-                				<a class="navbar-brand" href="index.html">
-                					<img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo_white_transparent_high_res.png" alt="brand"/>
-                				</a>
-            				</div>
-
-            			<!-- Collect the nav links, forms, and other content for toggling -->
-            				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                				<ul class="nav navbar-nav navbar-right">
-                  				  <li class="hidden">
-                        			<a href="#page-top"></a>
-                    				</li>
-                    				<li class="page-scroll">
-                        				<a href="blog.html">Blog</a>
-                    				</li>
-                    				<li class="page-scroll">
-                        				<a href="contact.html">Contact</a>
-                    				</li>
-                    				<li class="page-scroll">
-                        				<a href="mailinglist.html">Mailing List</a>
-                    				</li>
-                    				<li>
-                        				<a href="store.html">Buy Now!</a>
-                    				</li>
-                				</ul>
-            				</div>
-            				<!-- /.navbar-collapse -->
-        				</div>
-        			
-        			<!-- /.container-fluid -->
-    				</nav>
-    			</div>
-    			</div>
-    			</div> 
-            </div>    
-        <div>
-            <div class="container-fluid">
-                <div class="row-fluid">
-                    <div class="col-md-12">
-                        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/navbar_img_placeholder.png" alt="blog-pic">
+		<header class="header clear" role="banner">
+           
+            <div class="blog-navbar-container">
+                <div class="container-fluid">
+                    <div class="row-fluid">
+                       <div class="col-md-12" id="img-container">
+                           <img src="<?php bloginfo('stylesheet_directory'); ?>/img/title_nav.jpg" alt="blog-pic">
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <nav class="blog-navbar">
+            <script type="text/javascript">
+                (function() {
+                    var img = document.getElementById('img-container').firstChild;
+                    img.onload = function() {
+                        if(img.height > img.width) {
+                            img.height = '100%';
+                            img.width = 'auto';
+                        }
+                    };
+                }());
+            </script>
             <div class="blog-navbar">
                 <div class="container-fluid">
     				<div class="row-fluid">
@@ -136,6 +146,6 @@
                     </div>            
                 </div>
 			</div>
-        </nav>
+            </div>
 	</header>
 <!-- /header -->

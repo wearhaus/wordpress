@@ -7,6 +7,11 @@
 .blog-title{
     font-family: "Lato", arial, sans-serif;
 }
+.gen-navbar {
+    height: 100px;
+    line-height: 100px;
+}
+
 .navbar {
         background: rgba(0, 0, 0, 0.7); /* make background translucent */
         font-family: "Lato", arial, sans-serif;
@@ -46,9 +51,34 @@
 #searchbar {
     padding-top:15px;
 }
+/*-----------------------------------------------------BLOG NAVBAR CSS ----------------------------------------------------*/
+.blog-navbar {
+    text-decoration: none;
+    background-color: #EDEDEC;
+    padding-left: 15px;
+    color: black;
+    clear:both;
 
-/*a {
-        font-family: "Lato", arial, sans-serif;
-        font-weight: 300;
-        text-transform: uppercase;
-}*/
+}
+
+.blognav a{
+    color: #000;
+    font-weight: 900;
+    text-transform: uppercase;
+     font-family: "Lato", arial, sans-serif;
+}
+
+.blog-navbar-container {
+    clear:both;
+    padding-top: 76px;
+
+}
+
+#img-container {
+   width: 48px;
+   height: 48px;
+}
+
+#img-container img {
+   width: 100%;
+}

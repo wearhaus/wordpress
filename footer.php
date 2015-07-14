@@ -1,4 +1,6 @@
-	<!-- FOOTER -->
+	</div>
+        <!-- /wrapper -->
+    <!-- FOOTER -->
     <footer class="text-center">
         <div class="footer-above">
             <div class="container">
@@ -38,8 +40,7 @@
     </footer>
     <!-- /FOOTER -->
 
-		</div>
-		<!-- /wrapper -->
+		
 
 		<?php wp_footer(); ?>
 

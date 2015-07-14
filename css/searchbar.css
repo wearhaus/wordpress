@@ -28,6 +28,9 @@
   -o-transition: width .55s ease;
   transition: width .55s ease;
 }
+.box {
+  margin-top: -3px;
+}
 
 .container-2 input#search::-webkit-input-placeholder {
    color: #65737e;
@@ -58,10 +61,13 @@
 .container-2 input#search:focus, .container-2 input#search:active{
   outline:none;
   width: 100px;
+  text-transform: uppercase;
 }
  
 .container-2:hover input#search{
 width: 200px;
+text-transform: uppercase;
+
 }
  
 .container-2:hover .icon{
