@@ -1,19 +1,22 @@
 <?php get_header(); ?>
 
-	<main role="main">
+	<div class="container-fluid">
+		<main role="main">
 		<!-- section -->
-		<section>
+			<section class="featured_articles">
+				<h1><?php //_e( 'Latest Posts', 'wearhaus' ); ?></h1>
+				<div class="large-img">
 
-			<h1><?php _e( 'Latest Posts', 'wearhaus' ); ?></h1>
+				</div>
 
-			<?php get_template_part('loop'); ?>
+				<?php get_template_part('loop'); ?>
 
-			<?php get_template_part('pagination'); ?>
+				<?php get_template_part('pagination'); ?>
 
-		</section>
+			</section>
 		<!-- /section -->
-	</main>
+		</main>
 
-<?php get_sidebar(); ?>
-
+		<?php //get_sidebar(); ?> 
+	</div>
 <?php get_footer(); ?>

@@ -1,5 +1,3 @@
-	</div>
-        <!-- /wrapper -->
     <!-- FOOTER -->
     <footer class="text-center">
         <div class="footer-above">
