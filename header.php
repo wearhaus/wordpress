@@ -71,7 +71,7 @@
         </div>       
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - HEADER(INCLDUDES IMG+ BLOG NAVBAR) - - - - - - - - - - - - - - - - - - -->
 		<header class="header clear" role="banner">
-            <div class="blog-navbar-container stickyheader">
+            <div class="blog-navbar-container" id="stickyheader">
                 <div class=" title-img" id="img-container">
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/title_nav.jpg" alt="blog-pic">
                 </div>
