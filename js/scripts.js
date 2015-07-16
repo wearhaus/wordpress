@@ -1,3 +1,4 @@
+
 (function ($, root, undefined) {
 	
 	$(function(){
@@ -6,11 +7,11 @@
  
         $(window).scroll(function(){
                 if( $(window).scrollTop() > stickyHeaderTop ) {
-                        $('#stickyheader').css({position: 'fixed', top: '0px'});
-                        $('#stickyalias').css('display', 'block');
+                        $('#stickyheader').css({position: 'fixed', top: '0px', width:'100%'});
+                        //$('#stickyalias').css('display', 'block');
                 } else {
                         $('#stickyheader').css({position: 'static', top: '0px'});
-                        $('#stickyalias').css('display', 'none');
+                        //$('#stickyalias').css('display', 'none');
                 }
         });
   });
