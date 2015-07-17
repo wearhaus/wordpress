@@ -465,6 +465,8 @@ function custom_css() {
     wp_enqueue_style('footer_css', get_template_directory_uri() . '/css/footer.css');
     //searchbar css
     wp_enqueue_style('searchbar_css', get_template_directory_uri() . '/css/searchbar.css');
+    //homepage css
+    wp_enqueue_style('homepage_css', get_template_directory_uri() . '/css/homepage.css');
     /*base css
      wp_enqueue_style('base_css', get_template_directory_uri() . '/css/base.css');
      wp_enqueue_styel('base_css', get_template_directory_uri() . '/css/base.css')

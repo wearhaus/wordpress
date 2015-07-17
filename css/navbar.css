@@ -58,12 +58,14 @@
     padding-top:15px;
 }
 /*-----------------------------------------------------BLOG NAVBAR CSS ----------------------------------------------------*/
+
 .blog-navbar {
     text-decoration: none;
     background-color: #EDEDEC;
     padding-left: 15px;
     color: black;
     clear:both;
+    z-index: 10;
 }
 .blog-navbar>li>a:hover, .blog-navbar>li>a:focus  {
     transition: color 0.2s ease;
@@ -89,4 +91,14 @@
 #stickyalias {
     display: none;
     height: 10px;
+}
+
+
+#blognavbar-logo>img{
+    height: 50px;
+    margin-top: -5px;
+}
+
+.blognav2 {
+    margin-left: 80px;
 }

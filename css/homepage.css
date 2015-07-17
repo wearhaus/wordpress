@@ -1,0 +1,32 @@
+#body-main {
+	background-color: #EDEDEC;
+}
+#feature-container {
+	padding-left: 146px;
+	padding-right: 50px;
+}
+#first-feature {
+	margin-top: 10px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	float:left;
+	height: 505px;
+	background-color:blue;
+}
+
+#second-feature {
+	margin-top: 10px;
+	/*float:right;*/
+	height:250px;
+	background-color:green;
+}
+
+#third-feature {
+	margin-top: 5px;
+	margin-bottom:5px;
+	clear:right;
+	/*float: right;*/
+	height:250px;
+	background-color:black;
+}
+

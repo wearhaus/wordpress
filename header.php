@@ -81,7 +81,13 @@
     				    <div class="row-fluid">
     				        <div class="col-md-10">
 				                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                    <ul class="nav navbar-nav navbar-left blognav">
+                                    <a class="navbar-brand hidden" id ="blognavbar-logo" href="index.html">
+                                        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/Favicon_Black.png" alt="brand"/>
+                                    </a>
+                                    <ul class="nav navbar-nav navbar-left blognav blognav2" id="navbar_blog">
+                                        <li>    
+                                            
+                                        </li>    
                                         <li class="hidden">
                                             <a href="#page-top"></a>
                                         </li>

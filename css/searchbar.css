@@ -5,12 +5,13 @@
   vertical-align: middle;
   white-space: nowrap;
   position: relative;
+
 }
 
 .container-2 input#search{
   width: 35px;
   height:35px;
-  background: #EDEDEC;
+  background-color: #EDEDEC;
   border: none;
   font-size: 10pt;
   float: left;
@@ -27,6 +28,16 @@
   -ms-transition: width .55s ease;
   -o-transition: width .55s ease;
   transition: width .55s ease;
+}
+
+.scrolled-down input#search {
+  transition: background-color 0.2s ease;
+  background-color:#F9F9F9;
+}
+
+.scrolled-up input#search{
+  transition: background-color 0.2s ease;
+  background-color:#EDEDEC;
 }
 .box {
   margin-top: -3px;
