@@ -62,6 +62,7 @@
 .blog-navbar {
     text-decoration: none;
     background-color: #EDEDEC;
+    padding-top:5px;
     padding-left: 15px;
     color: black;
     clear:both;

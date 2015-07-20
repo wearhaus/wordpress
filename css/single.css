@@ -1,0 +1,25 @@
+#featured-image {
+	padding-left:100px;
+	padding-right:100px;
+	padding-top: 30px;
+}
+
+#featured-image>img{
+	width:100%;
+}
+
+.post_title>a{
+	text-decoration: none;
+
+}
+
+.page-main {
+	background-color: #EDEDEC;
+	
+}
+
+#content {
+	display: block;
+	font-family: "Lato", arial, sans-serif;
+}
+
