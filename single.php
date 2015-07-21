@@ -13,35 +13,39 @@
 		<!-- /post thumbnail -->
 		<div class="container-fluid">
 			<div class="row-fluid">
-				<div class="col-md-12" id="content">
+				<div class="col-md-9">
 					<!-- article -->
 					<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<!-- post title -->
-						<h1 class="post_title">
-							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-						</h1>
-						<!-- /post title -->
+						<div class="wrapper">
+							<div id="content">
+								<!-- post title -->
+								<h1 id="post_title">
+									<?php the_title(); ?>
+								</h1>
+								<!-- /post title -->
 
-						<!-- post details -->
-						<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-						<!-- <span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>-->
-						<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-						<!-- /post details -->
+								<!-- post details -->
+								<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
+								<!-- <span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>-->
+								<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
+								<!-- /post details -->
 
-						<?php the_content(); // Dynamic Content ?>
+								<?php the_content(); // Dynamic Content ?>
 
-						<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+								<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
 
-						<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
+								<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
 
-						<p><?php _e( 'This post was written by ', 'html5blank' ); the_author(); ?></p>
+								<p><?php _e( 'This post was written by ', 'html5blank' ); the_author(); ?></p>
 
-						<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
-
+								<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
+							</div>
+						</div>
 						<?php comments_template(); ?>
 					</article>
 				</div>
+				<?php get_sidebar(); ?>
 			</div>
 		</div>
 		<!-- /article -->

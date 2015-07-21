@@ -469,6 +469,8 @@ function custom_css() {
     wp_enqueue_style('homepage_css', get_template_directory_uri() . '/css/homepage.css');
     //single page css
     wp_enqueue_style('single_css', get_template_directory_uri() . '/css/single.css');
+    //single page css
+    wp_enqueue_style('sidebar_css', get_template_directory_uri() . '/css/sidebar.css');
     /*base css
      wp_enqueue_style('base_css', get_template_directory_uri() . '/css/base.css');
      wp_enqueue_styel('base_css', get_template_directory_uri() . '/css/base.css')
@@ -484,4 +486,30 @@ function my_jquery_enqueue() {
    wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", false, null);
    wp_enqueue_script('jquery');
 }
+//-----------------------------------------------------------------------------------------------------------------------------
+
+
+//--------------------------------MOST POPULAR POSTS---------------------------------------------------------------------------
+function wpb_set_post_views($postID) {
+    $count_key = 'wpb_post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        $count = 0;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+    }else{
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
+//To keep the count accurate, lets get rid of prefetching
+remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+//-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 ?>
+
+
+

@@ -11,7 +11,7 @@
 .container-2 input#search{
   width: 35px;
   height:35px;
-  background-color: #EDEDEC;
+  background-color: #EDEDED;
   border: none;
   font-size: 10pt;
   float: left;
@@ -37,7 +37,7 @@
 
 .scrolled-up input#search{
   transition: background-color 0.2s ease;
-  background-color:#EDEDEC;
+  background-color:#EDEDED;
 }
 .box {
   margin-top: -3px;

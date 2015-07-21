@@ -1,0 +1,27 @@
+#sidebar_p1 {
+	float:right;
+	margin-top: 20px;
+	outline-color: #00bccc;
+	outline-style: solid;
+	outline-width: 2px;
+	
+}
+
+.sidebar_header {
+	background-color: #FFF;
+
+	outline-color: #000;
+	outline-style: solid;
+	outline-width: 2px;
+
+	margin-top: 5px;
+	/*margin-right: 5px;
+	margin-left: 5px;*/
+	margin-bottom: 5px;
+}
+
+.sidebar_body {
+	height:740px;
+	background-color:red;
+}
+

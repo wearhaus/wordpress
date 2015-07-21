@@ -32,7 +32,7 @@
                         $('#blognavbar-logo').addClass('hidden');
                         
                         //changing color of blog-navbar
-                        $('#stickyheader').css({'transition': 'background-color 0.2s ease', 'background-color': '#EDEDEC'});
+                        $('#stickyheader').css({'transition': 'background-color 0.2s ease', 'background-color': '#EDEDED'});
                         
                         //changing color of searchbar
                         $('#searchbar').removeClass('scrolled-down');

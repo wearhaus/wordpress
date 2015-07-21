@@ -6,20 +6,42 @@
 
 #featured-image>img{
 	width:100%;
+
+	outline-color: #000;
+	outline-style: solid;
+	outline-width: 2px;
 }
 
-.post_title>a{
-	text-decoration: none;
+h1{
+	font-weight: 100px;
 
 }
 
 .page-main {
-	background-color: #EDEDEC;
+	background-color: #EDEDED;
 	
 }
 
 #content {
 	display: block;
 	font-family: "Lato", arial, sans-serif;
+	font-size: 16px;
+	font-weight: 10px;
+	
+	margin-top: 25px;
+	margin-bottom: 25px;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+
+.wrapper {
+	float: left;
+	margin-left: 70px;
+	outline-color: #00bccc;
+	outline-style: solid;
+	outline-width: 2px;
+	background-color: #FFF;
 }
 
