@@ -21,6 +21,7 @@
         margin-bottom: 0px;
         padding: 10px 0;
         text-transform: uppercase;
+        border-radius: 0px;
 }
 
         .navbar a:focus {
@@ -54,11 +55,13 @@
     padding: 5px 15px;
 }
 
-#searchbar {
-    padding-top:15px;
-}
+
 /*-----------------------------------------------------BLOG NAVBAR CSS ----------------------------------------------------*/
 
+#searchbar {
+    padding-top:15px;
+    padding-left: 135px;
+}
 .blog-navbar {
     text-decoration: none;
     background-color: #EDEDED;
@@ -102,4 +105,11 @@
 
 .blognav2 {
     margin-left: 80px;
+}
+
+#blognav_container {
+    margin-right: 0px;
+    margin-left: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
 }

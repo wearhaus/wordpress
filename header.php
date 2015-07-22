@@ -74,12 +74,11 @@
             <div class="blog-navbar-container">
                 <div class=" title-img" id="img-container">
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/title_nav.jpg" alt="blog-pic">
-                </div>
+            </div> 
                 
                 <div class="blog-navbar" id="stickyheader">
-                    <div class="container-fluid">
-    				    <div class="row-fluid">
-    				        <div class="col-md-10">
+                    <div class="container"id="blognav_container">
+    				        <div class="col-md-10" >
 				                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                     <a class="navbar-brand hidden" id ="blognavbar-logo" href="index.html">
                                         <img src="<?php bloginfo('stylesheet_directory'); ?>/img/Favicon_Black.png" alt="brand"/>
@@ -120,7 +119,6 @@
                             </div>
                             <!-- /searchbar -->
                         </div>            
-                    </div>
                 </div>
             </div>
             <div id="stickyalias"></div>
