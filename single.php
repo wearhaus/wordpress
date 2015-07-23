@@ -1,6 +1,7 @@
 <!-- SINGLE POST PAGE -->
 
 <?php get_header(); ?>
+<body>
 	<div class="page-main" id="body-main">
 		<!-- post thumbnail -->	
 		<div class="container-fluid" id="featured-image">
@@ -38,7 +39,25 @@
 
 							<p><?php _e( 'Categorised in: ', 'wearhaus' ); the_category(', '); // Separated by commas ?></p>
 						</div>
-						<?php comments_template(); ?>
+						<div class="related_articles">
+							<?php wp_related_posts()?>
+						</div>
+						<div class="comment_section">
+							<div id="disqus_thread"></div>
+								<script type="text/javascript">
+								    /* * * CONFIGURATION VARIABLES * * */
+								    // Required: on line below, replace text in quotes with your forum shortname
+								    var disqus_shortname = 'wearhaus';
+								    
+								    /* * * DON'T EDIT BELOW THIS LINE * * */
+								    (function() {
+								        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+								        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+								        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+								    })();
+								</script>
+								<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+						</div>	
 					</article>
 				</div>
 				<?php get_sidebar(); ?>
@@ -46,21 +65,36 @@
 		</div>
 		<!-- /article -->
 
-	<?php endwhile; ?>
+		<?php endwhile; ?>
 
-	<?php else: ?>
+		<?php else: ?>
 
-		<!-- article -->
-		<article>
+			<!-- article -->
+			<article>
 
-			<h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
+				<h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
 
-		</article>
-		<!-- /article -->
+			</article>
+			<!-- /article -->
 
-	<?php endif; ?>
+		<?php endif; ?>
 
-	<!-- /section -->
+		<!-- /section -->
 	</div>
 
-<?php get_footer(); ?>
+	<?php get_footer(); ?>
+			<!-- COMMENT COUNTER SECTION-->
+	<script type="text/javascript">
+	    /* * * CONFIGURATION VARIABLES * * */
+	    // Required: on line below, replace text in quotes with your forum shortname
+	    var disqus_shortname = 'wearhaus';
+	    
+	    /* * * DON'T EDIT BELOW THIS LINE * * */
+	    (function () {
+	        var s = document.createElement('script'); s.async = true;
+	        s.type = 'text/javascript';
+	        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+	        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+	    }());
+	</script>
+</body>
