@@ -49,8 +49,10 @@ h1{
 	padding-top: 20px;
 	padding-right: 25px;
 	padding-bottom: 10px;
+}
 
-
+#content>p, #content>ul {
+	line-height: 200%;
 }
 
 .wrapper {
