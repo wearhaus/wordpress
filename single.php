@@ -35,7 +35,9 @@
 
 							<?php the_content(); // Dynamic Content ?>
 
-							<?php the_tags( __( 'Tags: ', 'wearhaus' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+							<div class="tags">
+								<?php the_tags( __( 'Tags: ', 'wearhaus' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+							</div>
 
 							<p><?php _e( 'Categorised in: ', 'wearhaus' ); the_category(', '); // Separated by commas ?></p>
 						</div>

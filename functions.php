@@ -471,6 +471,8 @@ function custom_css() {
     wp_enqueue_style('single_css', get_template_directory_uri() . '/css/single.css');
     //single page css
     wp_enqueue_style('sidebar_css', get_template_directory_uri() . '/css/sidebar.css');
+    //search page css
+    wp_enqueue_style('search_css', get_template_directory_uri() . '/css/search.css');
     /*base css
      wp_enqueue_style('base_css', get_template_directory_uri() . '/css/base.css');
      wp_enqueue_styel('base_css', get_template_directory_uri() . '/css/base.css')

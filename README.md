@@ -3,11 +3,14 @@
 2015 Wearhaus Blog using wordpress
 
 POSTING TITLES:
-When posting titles for a blog post, you must retype the title in the content portion of the wordpress backend.
+When posting titles for a blog post, you must retype the title and date in the content portion of the wordpress backend.
 Encase the title in the following tags:
 
 <div class="post_title">
 	(TYPE THE TITLE HERE)
+</div>
+<div class="date">
+	(ENTER DATE HERE)
 </div>
 
 If you wish to have a specific category(ie. Wearhaus Featured Artist), follow th outline below:
@@ -17,4 +20,7 @@ If you wish to have a specific category(ie. Wearhaus Featured Artist), follow th
 		(TYPE THE CATEGORY HERE)
 	</p>
 	(TYPE REST OF TITLE HERE)
+</div>
+<div class="date">
+	(ENTER DATE HERE)
 </div>

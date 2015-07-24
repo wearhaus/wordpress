@@ -28,6 +28,7 @@
 .sidebar_body {
 	background-color:#FFF;
 	margin-right: 42px;
+	padding-bottom: 10px;
 }
 
 .fb-like-box {
@@ -87,8 +88,24 @@
 	padding-top: 5px;
 	font-size: 19px;
 }
+
+#fb_sb_body {
+	padding-bottom: 0px;
+}
 #tw_sb {
 	padding-top: 5px;
-	font-size: 19px;
+	font-size: 19px;	
 }
+
+#tw_sb_body {
+	height:600px;
+	padding-bottom: 0px;
+}
+
+._2ph-  {
+	background-color: #FFF;
+}
+
+
+
 
