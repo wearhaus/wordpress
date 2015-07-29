@@ -6,9 +6,11 @@
   white-space: nowrap;
   position: relative;
 
+
 }
 
 .container-2 input#search{
+  text-transform: uppercase;
   width: 35px;
   height:35px;
   background-color: #EDEDED;

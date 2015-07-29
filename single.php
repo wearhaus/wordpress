@@ -45,6 +45,10 @@
 							<?php wp_related_posts()?>
 						</div>
 						<div class="comment_section">
+							<?php comments_template(); ?>
+						</div>
+						<!--DISQUS
+						<div class="comment_section">
 							<div id="disqus_thread"></div>
 								<script type="text/javascript">
 								    /* * * CONFIGURATION VARIABLES * * */
@@ -59,7 +63,7 @@
 								    })();
 								</script>
 								<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-						</div>	
+						</div>	-->
 					</article>
 				</div>
 				<?php get_sidebar(); ?>
@@ -86,6 +90,7 @@
 
 	<?php get_footer(); ?>
 			<!-- COMMENT COUNTER SECTION-->
+	<!-- MORE DISQUS STUFF
 	<script type="text/javascript">
 	    /* * * CONFIGURATION VARIABLES * * */
 	    // Required: on line below, replace text in quotes with your forum shortname
@@ -98,5 +103,5 @@
 	        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
 	        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
 	    }());
-	</script>
+	</script> -->
 </body>

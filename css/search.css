@@ -3,6 +3,7 @@ a {
 	text-decoration: none;
 }
 #search_content {
+	width:100%;
 	outline-color: #00bccc;
 	outline-style: solid;
 	outline-width: 2px;

@@ -27,16 +27,16 @@
 				wp_reset_query();
 			?>
 		</div>
-		<div class="sidebar_header" id="fb_sb">
+		<!--<div class="sidebar_header" id="fb_sb">
 			<div class="text-container">
 				<p>LIKE US</p> on facebook /// 
 			</div>
 		</div>
 		<div class="sidebar_body" id="fb_sb_body">
 			<div class="sidebar-widget">
-				<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
+				<?php //if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
 			</div>
-		</div>
+		</div> -->
 		<div class="sidebar_header" id="tw_sb">
 			<div class="text-container">
 				<p>FOLLOW US</p> on twitter ///

@@ -27,7 +27,6 @@
             tests: {}
         });
         </script>
-
 	</head>
 	<body <?php body_class(); ?>>
     <!-- GENERAL NAVBAR ONLY-->

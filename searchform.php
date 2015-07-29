@@ -3,7 +3,7 @@
 	<div class="box">
 	  <div class="container-2">
 	      <span type ="submit"class="icon"><i class="fa fa-search"></i></span>
-	      <input type="search" name="s" id="search" placeholder="Search" />
+	      <input type="search" name="s" id="search" placeholder="search" />
 	  </div>
 	</div>
 </form>
