@@ -36,10 +36,10 @@
 							<?php the_content(); // Dynamic Content ?>
 
 							<div class="tags">
-								<?php the_tags( __( 'Tags: ', 'wearhaus' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+								<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
 							</div>
 
-							<p><?php _e( 'Categorised in: ', 'wearhaus' ); the_category(', '); // Separated by commas ?></p>
+							<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
 						</div>
 						<div class="related_articles">
 							<?php wp_related_posts()?>

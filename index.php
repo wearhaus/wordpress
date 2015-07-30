@@ -21,7 +21,11 @@
 								?>
 					        	<span class="caption-overlay caption-overlay-1" style="background: url(<?php bloginfo('stylesheet_directory'); ?>/img/overlay2.png) repeat-x 0 0;"></span>
 								<div class='feature_title'>
-									<h1><?php the_title(); ?></h1>
+									<a href="<?php the_permalink()?>" title="<?php the_title(); ?>">
+									
+										<h1><?php the_title(); ?></h1>
+									
+									</a>
 								</div>
 					        </div>
 				<?php
@@ -51,7 +55,11 @@
 								?>
 					        	<span class="caption-overlay caption-overlay-1" style="background: url(<?php bloginfo('stylesheet_directory'); ?>/img/overlay2.png) repeat-x 0 0;"></span>
 								<div class='feature_title'>
-									<h2><?php the_title(); ?></h2>
+									<a href="<?php the_permalink()?>" title="<?php the_title(); ?>">
+									
+										<h2><?php the_title(); ?></h2>
+									
+									</a>
 								</div>
 					        </div>
 				<?php
@@ -70,20 +78,24 @@
 					    while (have_posts()) : the_post();
 					        ?>
 					        
-					        <div class="image_container" >
-					        	<?php
-					        
-					        	if (function_exists('has_post_thumbnail')) {
-								    if ( has_post_thumbnail() ) {
-								    	the_post_thumbnail();
-								    }
-								}
-								?>
-					        	<span class="caption-overlay caption-overlay-1" style="background: url(<?php bloginfo('stylesheet_directory'); ?>/img/overlay2.png) repeat-x 0 0;"></span>
-								<div class='feature_title'>
-									<h2><?php the_title(); ?></h2>
-								</div>
-					        </div>
+						        <div class="image_container" >
+						        	<?php
+						        
+						        	if (function_exists('has_post_thumbnail')) {
+									    if ( has_post_thumbnail() ) {
+									    	the_post_thumbnail();
+									    }
+									}
+									?>
+						        	<span class="caption-overlay caption-overlay-1" style="background: url(<?php bloginfo('stylesheet_directory'); ?>/img/overlay2.png) repeat-x 0 0;"></span>
+									<div class='feature_title'>
+									<a href="<?php the_permalink()?>" title="<?php the_title(); ?>">
+									
+										<h2><?php the_title(); ?></h2>
+									
+									</a>
+									</div>
+						        </div>
 				<?php
 					    endwhile;
 					endif;

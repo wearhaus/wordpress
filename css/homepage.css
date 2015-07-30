@@ -56,9 +56,9 @@
 
 .feature_title h2, .feature_title h1 {
 	margin: 0;
-  	color: white;
   	text-shadow: 0 1px 0 black;
   	font-family: "Lato", arial, sans-serif;
+  	text-decoration: none;
 }
 .caption-overlay-1 {
     height: 150px;
@@ -68,3 +68,12 @@
     position: absolute;
     bottom: 2px;
 }
+.feature_title>a {
+	color: #FFF;
+	text-decoration: none;
+}
+.feature_title>a:hover, .feature_title>a:focus {
+    transition: color 0.2s ease;
+    color: #00bbcc;
+    outline: 0;
+ }
