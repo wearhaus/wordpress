@@ -27,16 +27,6 @@
 				wp_reset_query();
 			?>
 		</div>
-		<!--<div class="sidebar_header" id="fb_sb">
-			<div class="text-container">
-				<p>LIKE US</p> on facebook /// 
-			</div>
-		</div>
-		<div class="sidebar_body" id="fb_sb_body">
-			<div class="sidebar-widget">
-				<?php //if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
-			</div>
-		</div> -->
 		<div class="sidebar_header" id="tw_sb">
 			<div class="text-container">
 				<p>FOLLOW US</p> on twitter ///
@@ -46,6 +36,17 @@
 			<a class="twitter-timeline" href="https://twitter.com/wearhausinc" data-widget-id="624299359467745280">Tweets by @wearhausinc</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		</div>
+		<div class="sidebar_header" id="fb_sb">
+			<div class="text-container">
+				<p>LIKE US</p> on facebook /// 
+			</div>
+		</div>
+		<div class="sidebar_body" id="fb_sb_body">
+			<div class="sidebar-widget">
+				<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
+			</div>
+		</div>                                          
+		
 
 	</div>	
 

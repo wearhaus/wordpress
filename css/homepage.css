@@ -77,3 +77,18 @@
     color: #00bbcc;
     outline: 0;
  }
+
+ /* ------------------------------------------RECENT CONTAINERS------------------------------------------------------------------------------------- */
+
+.recent-container .col-md-8 {
+	clear:both;
+	display: inline-block;
+}
+.category_recent_post {
+	width:280px;
+	padding-right: 0px;
+	float:left;
+}
+.category_name {
+	width:200px;
+}
