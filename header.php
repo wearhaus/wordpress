@@ -90,7 +90,7 @@
                                             <a href="#page-top"></a>
                                         </li>
                                         <li class="page-scroll">
-                                            <a href="blog.html">Recent</a>
+                                            <a href="#">Recent</a>
                                         </li>
                                         <li class="page-scroll">
                                             <a href="contact.html">Artists</a>

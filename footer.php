@@ -1,4 +1,4 @@
-    <!-- FOOTER -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -FOOTER  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <footer class="text-center">
         <div class="footer-above">
             <div class="container">
@@ -36,7 +36,7 @@
             </div>
         </div>
     </footer>
-    <!-- /FOOTER -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -END FOOTER  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 		
 
