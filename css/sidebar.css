@@ -29,6 +29,7 @@
 	background-color:#FFF;
 	margin-right: 42px;
 	padding-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .fb-like-box {
@@ -40,8 +41,8 @@
 	color:#000;
 	font-family: "Lato", arial, sans-serif;
 	font-size: 14px;
-	font-weight: 20;
-	padding-left:10px;
+	font-weight: 900;
+	padding-left:15px;
 	text-align: center;
 	display: inline-block;
 }
@@ -106,6 +107,9 @@
 	background-color: #FFF;
 }
 
+.timeline-footer {
+	background: #FFF;
+}
 
 
 

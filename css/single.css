@@ -2,11 +2,13 @@
 	padding-left:100px;
 	padding-right:100px;
 	padding-top: 5px;
+	overflow: hidden;
+	max-height: 720px;
+	
 }
 
 #featured-image>img{
 	width:100%;
-	max-height: 720px;
 	max-width: 1240px;
 }
 
@@ -43,9 +45,6 @@ h1{
  }
 
 #content {
-	outline-color: #00bccc;
-	outline-style: solid;
-	outline-width: 2px;
 	background-color: #FFF;
 
 	display: inline-block;
@@ -53,7 +52,7 @@ h1{
 	font-size: 16px;
 	border-right: 10px;
 	margin-top: 25px;
-	margin-bottom: 25px;
+	margin-bottom: 10px;
 	padding-left: 25px;
 	padding-top: 20px;
 	padding-right: 25px;
@@ -74,9 +73,7 @@ h1{
 }
 
 .related_articles {
-	outline-color: #00bccc;
-	outline-style: solid;
-	outline-width: 2px;
+	
 	background-color: #FFF;
 
 	padding-left: 25px;
@@ -118,5 +115,9 @@ ul.related_post li img {
 }
 .wp_rp_footer {
 	display: none;
+}
+.related_articles {
+	width:950px;
+	padding-left: 45px;
 }
 

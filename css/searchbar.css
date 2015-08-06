@@ -25,11 +25,11 @@
   -moz-border-radius: 5px;
   border-radius: 5px;
   color: #000;
-  -webkit-transition: width .55s ease;
-  -moz-transition: width .55s ease;
-  -ms-transition: width .55s ease;
-  -o-transition: width .55s ease;
-  transition: width .55s ease;
+  -webkit-transition: width 1.0s ease;
+  -moz-transition: width 1.0s ease;
+  -ms-transition: width 1.0s ease;
+  -o-transition: width 1.0s ease;
+  transition: width 1.0s ease;
 }
 
 .scrolled-down input#search {

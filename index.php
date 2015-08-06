@@ -125,8 +125,9 @@
 						query_posts($args); // reset to original
 
 						if (have_posts()) :
-							echo '<div class="small_category">';
-							echo '<div class="post_title">'.$cat->name.' ///</div>';
+							
+							echo '<div class="post_title" id="cat_title"><p>'.$cat->name.' ///</p></div>';
+						echo '<div class="small_category">';
 				?>
 
 				<?php while (have_posts()) : the_post(); ?>		

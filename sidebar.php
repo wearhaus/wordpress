@@ -46,7 +46,14 @@
 				<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
 			</div>
 		</div>                                          
-		
+		<!--<div class="sidebar_header" id="ig_sb">
+			<div class="text-container">
+				<p>FOLLOW US</p> on twitter ///
+			</div>
+		</div>
+		<div class="sidebar_body" id="ig_sb_body">
+			<?php //echo do_shortcode("[instagram-feed]"); ?>
+		</div>-->
 
 	</div>	
 

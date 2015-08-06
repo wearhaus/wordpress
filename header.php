@@ -79,7 +79,7 @@
                     <div class="container"id="blognav_container">
     				        <div class="col-md-10" >
 				                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                    <a class="navbar-brand hidden" id ="blognavbar-logo" href="index.html">
+                                    <a class="navbar-brand hidden" id ="blognavbar-logo" href="<?php bloginfo('url');?>">
                                         <img src="<?php bloginfo('stylesheet_directory'); ?>/img/Favicon_Black.png" alt="brand"/>
                                     </a>
                                     <ul class="nav navbar-nav navbar-left blognav blognav2" id="navbar_blog">
@@ -93,13 +93,16 @@
                                             <a href="#">Recent</a>
                                         </li>
                                         <li class="page-scroll">
-                                            <a href="contact.html">Artists</a>
+                                            <?php $category_id = get_cat_ID( 'Artist Interviews' ); ?>
+                                            <a href="<?php echo get_category_link( $category_id ); ?> ">Artists</a>
                                         </li>
                                         <li class="page-scroll">
-                                            <a href="mailinglist.html">Product Updates</a>
+                                            <?php $category_id = get_cat_ID( 'Product Updates' ); ?>
+                                            <a href="<?php echo get_category_link( $category_id ); ?>">Product Updates</a>
                                         </li>
-                                        <li>
-                                            <a href="store.html">Events</a>
+                                        <li class="page-scroll">
+                                            <?php $category_id = get_cat_ID( 'Events' ); ?>
+                                            <a href="<?php echo get_category_link( $category_id ); ?>">Events</a>
                                         </li>
                                     </ul>
                                 </div>

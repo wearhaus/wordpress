@@ -3,10 +3,6 @@ a {
 	text-decoration: none;
 }
 #search_content {
-	width:100%;
-	outline-color: #00bccc;
-	outline-style: solid;
-	outline-width: 2px;
 	background-color: #FFF;
 
 	display: inline-block;
@@ -25,7 +21,7 @@ a {
 	padding-top: 20px;
 	padding-bottom: 20px;
 
-	border-bottom:2px solid #00bbcc;
+	border-bottom:2px solid #C1C1C1;
 }
 
 #search_content .post h2 a{
@@ -45,6 +41,9 @@ a {
 
 #search_content #post_title {
 	padding-bottom: 10px;
-	border-bottom:5px solid #00bbcc;
+	border-bottom:5px solid #C1C1C1;
+}
 
+#search_content .date {
+	font-size: 16px;
 }
