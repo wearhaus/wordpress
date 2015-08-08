@@ -13,23 +13,23 @@
 	float:left;
 	height: 505px;
 	padding-right: 0px;
-	
+	overflow: hidden;
 }
-#first-feature img {
+/*#first-feature img {
 	height: 100%;
-}
+}*/
 
 #second-feature {
 	margin-top: 10px;
 	/*float:right;*/
 	height:250px;
 	padding-left: 0px;
-	
+	overflow: hidden;
 }
-#second-feature img {
+/*#second-feature img {
 	height: 100%;
 }
-
+*/
 #third-feature {
 	margin-top: 5px;
 	margin-bottom:5px;
@@ -191,3 +191,19 @@
  	margin-bottom: 0px !important;
  	padding-top:3px;
  }
+.cont_404 {
+	width:90%;
+}
+
+.cont_404 img {
+	margin-left: 90px;
+}
+
+.cont_404_title {
+	text-align: center;
+}
+
+.excerpt {
+	font-size: 8px;
+	font-family: "Lato", arial, sans-serif;
+}

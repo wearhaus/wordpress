@@ -41,27 +41,29 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">
-                        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo_white_transparent_high_res.png" alt="brand"/>
-                    </a>
+                    <a class="navbar-brand" href="/"><img alt="Brand" src="<?php bloginfo('stylesheet_directory'); ?>/img/logo_white_transparent_high_res.png"></a>
                 </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="hidden">
                             <a href="#page-top"></a>
                         </li>
                         <li class="page-scroll">
-                            <a href="blog.html">Blog</a>
+                            <a href="/">Our Story</a>
                         </li>
                         <li class="page-scroll">
-                            <a href="contact.html">Contact</a>
+                            <a href="/">Blog</a>
                         </li>
                         <li class="page-scroll">
-                            <a href="mailinglist.html">Mailing List</a>
+                            <a href="www.google.com">Mailing List</a>
                         </li>
-                        <li>
-                            <a href="store.html">Buy Now!</a>
+                        <li class="page-scroll">
+                            <a href="www.wearhaus.zendesk.com">Support</a>
+                        </li>
+                        <li class="page-scroll" id="order_now">
+                            <a href="store.wearhaus.com" id="order_now_link">Order Now</a>
                         </li>
                     </ul>
                 </div>
@@ -90,19 +92,19 @@
                                             <a href="#page-top"></a>
                                         </li>
                                         <li class="page-scroll">
-                                            <a href="#">Recent</a>
-                                        </li>
-                                        <li class="page-scroll">
                                             <?php $category_id = get_cat_ID( 'Artist Interviews' ); ?>
                                             <a href="<?php echo get_category_link( $category_id ); ?> ">Artists</a>
+                                        </li>
+                                        <li class="page-scroll">
+                                            <?php $category_id = get_cat_ID( 'Events' ); ?>
+                                            <a href="<?php echo get_category_link( $category_id ); ?>">Events</a>
                                         </li>
                                         <li class="page-scroll">
                                             <?php $category_id = get_cat_ID( 'Product Updates' ); ?>
                                             <a href="<?php echo get_category_link( $category_id ); ?>">Product Updates</a>
                                         </li>
                                         <li class="page-scroll">
-                                            <?php $category_id = get_cat_ID( 'Events' ); ?>
-                                            <a href="<?php echo get_category_link( $category_id ); ?>">Events</a>
+                                            <a href="#">Archives</a>
                                         </li>
                                     </ul>
                                 </div>

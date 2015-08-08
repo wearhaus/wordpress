@@ -55,6 +55,22 @@
     padding: 5px 15px;
 }
 
+#order_now {
+    margin-left: 15px;
+    padding-top: 5px;
+}
+
+#order_now_link {
+    background-color: #00bccc;
+    border-radius: 5px;
+    padding: 10px 15px 10px 15px;
+}
+
+    #order_now_link:hover, #order_now_link:focus {
+        transition: color 0.3s ease;
+        background-color: #33C9D6; /* make background lighter on hover/focus */
+        color: white;
+    }
 
 /*-----------------------------------------------------BLOG NAVBAR CSS ----------------------------------------------------*/
 

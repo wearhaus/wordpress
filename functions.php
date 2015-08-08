@@ -221,6 +221,10 @@ function html5wp_pagination()
 
 
 // Custom Excerpts
+function custom_excerpt_length( $length ) {
+    return 25;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 function html5wp_index($length) // Create 20 Word Callback for Index page Excerpts, call using html5wp_excerpt('html5wp_index');
 {
     return 20;
