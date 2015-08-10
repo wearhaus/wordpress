@@ -1,15 +1,13 @@
 #featured-image {
-	padding-left:100px;
-	padding-right:100px;
 	padding-top: 5px;
 	overflow: hidden;
 	max-height: 720px;
-	
+	margin-left: 4.1666666%;
 }
 
 #featured-image>img{
 	width:100%;
-	max-width: 1240px;
+	
 }
 
 .post_title {
@@ -41,13 +39,13 @@ h1{
  #post_content {
  	float: left;
  	margin-top: -10px;
-	margin-left: 70px;
+	margin-left: 4.1666666%;
  }
 
 #content {
 	background-color: #FFF;
 
-	display: inline-block;
+	display: block;
 	font-family: "Lato", arial, sans-serif;
 	font-size: 16px;
 	border-right: 10px;
@@ -63,9 +61,13 @@ h1{
 	line-height: 200%;
 }
 
+iframe {
+	width: 100%;
+}
+
 .wrapper {
 	float: left;
-	margin-left: 70px;
+	margin-left: 4.1666666%;
 	outline-color: #00bccc;
 	outline-style: solid;
 	outline-width: 2px;
@@ -117,7 +119,11 @@ ul.related_post li img {
 	display: none;
 }
 .related_articles {
-	width:950px;
+	
 	padding-left: 45px;
+}
+
+.related_cont {
+	margin-left:4.1666666%;
 }
 

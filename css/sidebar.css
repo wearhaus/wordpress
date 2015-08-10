@@ -1,12 +1,12 @@
 .sidebar_p1 {
 	margin-top: 5px;
-	margin-left: 20px;
+	margin-right: 4.1666666%;
 }
 
 .sidebar_header {
 	background-color: #FFF;
 	position: relative;
-	margin-right: 42px;
+	
 	margin-top: 10px;
 	margin-bottom: 10px;
 	height: 42px;
@@ -27,7 +27,7 @@
 
 .sidebar_body {
 	background-color:#FFF;
-	margin-right: 42px;
+	
 	padding-bottom: 10px;
 	margin-bottom: 10px;
 }

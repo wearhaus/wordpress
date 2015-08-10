@@ -4,12 +4,16 @@
 <body>
 	<div class="page-main" id="body-main">
 		<!-- post thumbnail -->	
-		<div class="container-fluid" id="featured-image">
-			<?php 
-				if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-					the_post_thumbnail();
-				} 
-			?>
+		<div class="container-fluid" >
+			<div class="row-fluid">
+				<div class="col-md-11" id="featured-image">
+					<?php 
+						if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+							the_post_thumbnail();
+						} 
+					?>
+				</div>
+			</div>
 		</div>
 		<!-- /post thumbnail -->
 		<div class="container-fluid">
@@ -41,12 +45,22 @@
 
 							<p><?php _e( 'Categorized in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
 						</div>
-						<div class="related_articles">
-							<?php wp_related_posts()?>
+					</article>
+					</div>
+				<?php get_sidebar(); ?>
+			</div>
+						<div class="row-fluid">
+							<div class="col-md-8 related_cont">
+								<div class="related_articles">
+									<?php wp_related_posts()?>
+								</div>
+								<div class="comment_section">
+									<?php comments_template(); ?>
+								</div>
+							</div>
+							
 						</div>
-						<div class="comment_section">
-							<?php comments_template(); ?>
-						</div>
+						
 						<!--DISQUS
 						<div class="comment_section">
 							<div id="disqus_thread"></div>
@@ -64,10 +78,8 @@
 								</script>
 								<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 						</div>	-->
-					</article>
-				</div>
-				<?php get_sidebar(); ?>
-			</div>
+					
+				
 		</div>
 		<!-- /article -->
 
