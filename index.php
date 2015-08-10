@@ -10,7 +10,7 @@
 					if ( have_posts() ) :
 					    while (have_posts()) : the_post();
 					        ?>
-					        
+					        <a id = 'feature_title-a'href="<?php the_permalink()?>" title="<?php the_title(); ?>">
 					        <div class="image_container" >
 					        	<?php
 					        
@@ -29,6 +29,7 @@
 									</a>
 								</div>
 					        </div>
+					    </a>
 				<?php
 					    endwhile;
 					endif;
@@ -44,7 +45,7 @@
 					if ( have_posts() ) :
 					    while (have_posts()) : the_post();
 					        ?>
-					        
+					        <a id = 'feature_title-a'href="<?php the_permalink()?>" title="<?php the_title(); ?>">
 					        <div class="image_container" >
 					        	<?php
 					        
@@ -55,14 +56,15 @@
 								}
 								?>
 					        	<span class="caption-overlay caption-overlay-1" style="background: url(<?php bloginfo('stylesheet_directory'); ?>/img/overlay2.png) repeat-x 0 0;"></span>
-									<div class='feature_title'>
-										<a href="<?php the_permalink()?>" title="<?php the_title(); ?>">
-										
-											<h2><?php the_title(); ?></h2>
-										
-										</a>
-									</div>
+								<div class='feature_title'>
+									<a id = 'feature_title-a'href="<?php the_permalink()?>" title="<?php the_title(); ?>">
+									
+										<h2><?php the_title(); ?></h2>
+									
+									</a>
+								</div>
 					        </div>
+					    </a>
 				<?php
 					    endwhile;
 					endif;
@@ -78,25 +80,26 @@
 					if ( have_posts() ) :
 					    while (have_posts()) : the_post();
 					        ?>
+					        <a id = 'feature_title-a'href="<?php the_permalink()?>" title="<?php the_title(); ?>">
+					        <div class="image_container" >
+					        	<?php
 					        
-						        <div class="image_container" >
-						        	<?php
-						        
-						        	if (function_exists('has_post_thumbnail')) {
-									    if ( has_post_thumbnail() ) {
-									    	the_post_thumbnail();
-									    }
-									}
-									?>
-						        	<span class="caption-overlay caption-overlay-1" style="background: url(<?php bloginfo('stylesheet_directory'); ?>/img/overlay2.png) repeat-x 0 0;"></span>
-									<div class='feature_title'>
-									<a href="<?php the_permalink()?>" title="<?php the_title(); ?>">
+					        	if (function_exists('has_post_thumbnail')) {
+								    if ( has_post_thumbnail() ) {
+								    	the_post_thumbnail();
+								    }
+								}
+								?>
+					        	<span class="caption-overlay caption-overlay-1" style="background: url(<?php bloginfo('stylesheet_directory'); ?>/img/overlay2.png) repeat-x 0 0;"></span>
+								<div class='feature_title'>
+									<a id = 'feature_title-a'href="<?php the_permalink()?>" title="<?php the_title(); ?>">
 									
 										<h2><?php the_title(); ?></h2>
 									
 									</a>
-									</div>
-						        </div>
+								</div>
+					        </div>
+					    </a>
 				<?php
 					    endwhile;
 					endif;
@@ -108,7 +111,7 @@
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - RECENT POSTS CONTAINER- - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - -  - -->
 		<div class="catcontainer">
 		<div class="row-fluid" id="recent-container">
-			<div class="col-md-8" id="posts">
+			<div class="col-md-9" id="posts">
 				<?php
 					wp_reset_query();
 
@@ -133,7 +136,7 @@
 				<?php while (have_posts()) : the_post(); ?>		
 				<div class="category_recent_post">
 					<div class="category_post_thumb">
-						<?php the_post_thumbnail('medium'); ?>
+						<?php the_post_thumbnail(); ?>
 					</div>
 					<div class="cat_title_container">
 						<div class="category_post_title">

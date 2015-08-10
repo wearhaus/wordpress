@@ -92,6 +92,10 @@ iframe {
 .tags {
 	padding-top: 50px;
 }
+
+.related_cont {
+	margin-left:4.1666666%;
+}
 /* -----------------------------------CSS FOR RELATED POSTS----------------------------------------- */
 .wp_rp_content, .wp_rp_content ul {
 	width:100%;
@@ -103,9 +107,8 @@ ul.related_post {
 
 }
 ul.related_post li {
-	margin-left: 10px !important;
-
-
+	margin-left: 5x !important;
+	margin-right: 5px !important;lo
 }
 ul.related_post li a {
 	font-size: 16px;
@@ -119,11 +122,6 @@ ul.related_post li img {
 	display: none;
 }
 .related_articles {
-	
+
 	padding-left: 45px;
 }
-
-.related_cont {
-	margin-left:4.1666666%;
-}
-

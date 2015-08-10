@@ -3,15 +3,15 @@
 	padding-bottom: 10px; 
 }
 #feature-container {
-	padding-left: 146px;
-	padding-right: 50px;
+	
 }
 #first-feature {
 	margin-top: 10px;
 	margin-right: 5px;
+	margin-left: 4.0%;
 	margin-bottom: 5px;
 	float:left;
-	height: 505px;
+	height: 565px;
 	padding-right: 0px;
 	overflow: hidden;
 }
@@ -22,7 +22,7 @@
 #second-feature {
 	margin-top: 10px;
 	/*float:right;*/
-	height:250px;
+	height:280px;
 	padding-left: 0px;
 	overflow: hidden;
 }
@@ -35,7 +35,7 @@
 	margin-bottom:5px;
 	clear:right;
 	/*float: right;*/
-	height:250px;
+	height:280px;
 	padding-left: 0px;
 	overflow:hidden;
 }
@@ -91,45 +91,45 @@
 
  /* ------------------------------------------RECENT CONTAINERS------------------------------------------------------------------------------------- */
 
-.recent-container .col-md-8 {
+.recent-container .col-md-9 {
 	clear:both;
 	display: inline-block;
 	float: right;
 }
 .category_recent_post {
-	width:250px;
+	width:32.7%;
 	float:left;
 	margin-left: 5px;
 }
 
 
 .category_post_thumb  img{
-	height:250px;
-	width:250px;
+	height: 100%;
+	width:100%;
+	
 }
 .category_name {
 	width:400px;
 }
 .sidebar_p2 {
 	float: right;
-	margin-right: 115px;
-	margin-left: 5px !important;
-	padding-left: 0px;
-	padding-right: 0px;
+	margin-right: 0px !important;
 	margin-top: 10px !important;
 }                      
 .catcontainer{
-	margin-left: 96px;
+	margin-left: 4.0%;
+	margin-right:4.0%;
 }
 
 .catcontainer #posts {
 	margin-top: 18px;
 	padding-right: 0px;
-	margin-left: 50px;
+	
 	
 }
 
 .small_category {
+	width:100%;
 	padding-bottom: 10px;
 	margin-bottom: 10px;
 	margin-top: -28px;
