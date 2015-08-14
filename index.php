@@ -1,8 +1,9 @@
 <?php get_header(); ?>
 <div class="container-fluid" id="body-main">
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - FEATURED CONTAINER- - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - -  - -->
-		<div class="row-fluid" id="feature-container">
-			<div class="col-md-7" id="first-feature">
+	<div class="container-fluid" id="cont_feature">	
+		<div class="row-fluid" >
+			<div class="col-md-7 feature-container" id="first-feature">
 				<?php $original_query = $wp_query;
 					$wp_query = null;
 					$args=array('posts_per_page'=>1, 'tag' => 'featured_1');
@@ -37,7 +38,7 @@
 					$wp_query = $original_query;
 				?>
 			</div>
-			<div class="col-md-4" id="second-feature">
+			<div class="col-md-4 feature-container" id="second-feature">
 			<?php $original_query = $wp_query;
 					$wp_query = null;
 					$args=array('posts_per_page'=>1, 'tag' => 'featured_2');
@@ -72,7 +73,7 @@
 					$wp_query = $original_query;
 				?>
 			</div>
-			<div class="col-md-4" id="third-feature">
+			<div class="col-md-4 feature-container" id="third-feature">
 				<?php $original_query = $wp_query;
 					$wp_query = null;
 					$args=array('posts_per_page'=>1, 'tag' => 'featured_3');
@@ -108,6 +109,7 @@
 				?>
 			</div>
 		</div>
+	</div>
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - RECENT POSTS CONTAINER- - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - -  - -->
 		<div class="catcontainer">
 		<div class="row-fluid" id="recent-container">
@@ -129,32 +131,36 @@
 
 						if (have_posts()) :
 							
-							echo '<div class="post_title" id="cat_title"><p>'.$cat->name.' ///</p></div>';
-						echo '<div class="small_category">';
+						echo '<div class="post_title" id="cat_title"><p>'.$cat->name.' ///</p></div>';
+		
+						echo '<div class="small_category"><div class="container-fluid cont_recent"><div class="row-fluid">';
+						$count = 0;
 				?>
 
 				<?php while (have_posts()) : the_post(); ?>		
-				<div class="category_recent_post">
-					<div class="category_post_thumb">
-						<?php the_post_thumbnail(); ?>
-					</div>
-					<div class="cat_title_container">
-						<div class="category_post_title">
-						  	<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
-						  		<?php the_title(); ?>
-						  	</a>
-						  	<p class="excerpt">
-						  		<?//php the_excerpt(); ?>
-							</p>
+				<div class="col-md-4 recent_posts post_<?php echo $count; ?>">
+					<div class="category_recent_post">
+						<div class="category_post_thumb">
+							<?php the_post_thumbnail('medium'); ?>
+						</div>
+						<div class="cat_title_container">
+							<div class="category_post_title">
+							  	<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
+							  		<?php the_title(); ?>
+							  	</a>
+							  	<p class="excerpt">
+							  		<?//php the_excerpt(); ?>
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
 				
-				<!-- this area is for the display of your posts the way you want it -->
-				<!-- i.e. title, exerpt(), etc. -->
+				<!--End of each post -->
+				
 
-				<?php endwhile; ?>
-				<?php echo '</div>';else : echo '<h2>No Posts for '.$cat->name.' Category</h2>';?>
+				<?php $count=$count+1;endwhile; echo '</div></div></div>';?>
+				<?php else : echo '<h2>No Posts for '.$cat->name.' Category</h2>';?>
 				<?php endif; wp_reset_query; 
 				 ?>
 
@@ -164,7 +170,7 @@
 			<div class="col-md-3 sidebar_p1 sidebar_p2" >
 				<div class="sidebar_header" id="tw_sb">
 					<div class="text-container">
-						<p>FOLLOW US</p> on twitter ///
+						<p>FOLLOW US</p> on twitter
 					</div>
 				</div>
 				<div class="sidebar_body" id="tw_sb_body">
@@ -173,7 +179,7 @@
 				</div>
 				<div class="sidebar_header" id="ig_sb">
 					<div class="text-container">
-						<p>FOLLOW US</p> on instagram /// 
+						<p>FOLLOW US</p> on instagram 
 					</div>
 				</div>
 				<div class="sidebar_body" id="ig_sb_body">
@@ -183,7 +189,7 @@
 				</div>   
 				<div class="sidebar_header" id="fb_sb">
 					<div class="text-container">
-						<p>LIKE US</p> on facebook /// 
+						<p>LIKE US</p> on facebook 
 					</div>
 				</div>
 				<div class="sidebar_body" id="fb_sb_body">
@@ -200,13 +206,13 @@
 </div>
 	<main role="main">
 		<!-- section -->
-			<section class="featured_articles">
+			
 			<div class="container-fluid">
 				<div class="row-fluid">
 				
 			</div class="row-fluid">
 			</div>
-			</section>
+			
 		<!-- /section -->
 	</main>
 </body>

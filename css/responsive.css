@@ -1,0 +1,220 @@
+/* MEDIA QUERIES */
+
+
+
+    /* tablets */
+    @media(max-width:768px) {
+        h3 {
+            font-size: 32px;
+        }
+
+        header .intro-text .name {
+            font-size: 4.75em;
+        }
+
+        header .intro-text .skills {
+            font-size: 1.75em;
+        }
+
+        p {
+            font-size: 15px;
+        }
+
+        section {
+            height: 798px;
+        }
+
+        .navbar {
+            border-radius: 0px; /* override Bootstrap rounding corners of navbar */
+        }
+
+        .container-mobile, .section-mobile {
+            display: none;
+        }
+
+        .tab-left, .tab-right {
+            width: 275px; /* make 75% of regular width */
+        }
+
+        .tab-text-left, .tab-text-right {
+            display: block;
+        }
+
+        .video-container iframe {
+            height: 70%;
+            left: 60px;
+            width: 70%;
+        }
+
+        #blog {
+            height: 100%;
+            width: 100%;
+        }
+
+            #blog .col-lg-3 {
+                width: 50%;
+                float: left;
+            }
+            .post_2 {
+            display: none;
+        }
+        
+            
+    }
+
+    /* tablets */
+    @media(max-width:992px) {
+        h3 {
+            font-size: 64px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .tab-left, .tab-right {
+            width: 412px;
+        }
+
+        .video-container iframe {
+            height: 100%;
+            left: 0;
+            width: 100%;
+        }
+
+        #blog .col-lg-3 {
+            width: 25%;
+            float: left;
+        }
+        .sidebar, .sidebar_p2 {
+            display:none;
+        }
+        
+        .post_0, .post_1 {
+            width:50%;
+        }
+        .post_0 {
+
+        }
+        .post_1 {
+            margin-left: 5px;
+            display: inline-table;
+
+        }
+        .post_2 {
+            display: none;
+        }
+        #first-feature {
+            height: 100%;
+            width:100%;
+            padding: 0px;
+            margin: 0px;
+            margin-bottom: 5px;
+        }
+        #second-feature, #third-feature {
+            width: 50%;
+            padding: 0px;
+            margin: 0px;
+            
+        }
+        #second-feature img, #third-feature img {
+            width: 100%;
+        }
+        .blog-navbar-container {
+            display: none;
+        }
+
+
+
+    }
+    /* smartphones */
+    @media(max-width:767px) {
+
+        h2 {
+            font-size: 21px;
+        }
+        h3 {
+            font-size: 36px;
+        }
+
+        h5 {
+            font-size: 24px;
+        }
+
+        header {
+            padding: 30px 0px 100px 0px;
+        }
+
+        section {
+            height: 497px;        
+        }
+
+            section.first {
+                padding-top: 75px;
+            }
+
+        .container-mobile {
+            color: white;
+            display: block;
+            height: 100%;
+            padding: 20% 10% 0% 10%;
+        }
+
+            .container-mobile p {
+                font-size: 16px;
+                font-weight: 300;
+            }
+
+        .section-mobile {
+            background-color: #00BCCC;
+            display: none;
+        }
+
+        .tab-text-left, .tab-text-right {
+            display: none;
+        }
+
+        #blog { /* override section CSS since blog responds differently */
+            height: 100%;
+        }
+
+            #blog .col-lg-3 {
+                width: 50%;
+                float: left;
+            }
+
+        #sync {
+            background-size: auto 497px;
+        }
+
+        #title-text {
+            margin: 0 auto;
+            text-align: center;
+        }
+        iframe {
+            height:100%;
+            width:100%;
+        }
+        .post_2 {
+            display: none;
+        }
+        .post_0, .post_1 {
+            width:50%;
+        }
+        .post_1 {
+            display: inline-table;
+        }
+        #first-feature {
+            height: 100%;
+            width:100%;
+            padding: 0px;
+            margin: 0px;
+            margin-bottom: 5px;
+        }
+        #second-feature, #third-feature {
+            
+            width: 50%;
+            padding: 0px;
+            margin: 0px;
+        }
+    }

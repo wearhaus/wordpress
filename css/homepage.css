@@ -1,9 +1,12 @@
+#cont_feature {
+	padding:0px;
+}
 #body-main {
 	background-color: #EDEDED;
 	padding-bottom: 10px; 
 }
-#feature-container {
-	
+.feature-container {
+	float: left;
 }
 #first-feature {
 	margin-top: 10px;
@@ -14,7 +17,11 @@
 	height: 565px;
 	padding-right: 0px;
 	overflow: hidden;
+
 }
+/*#first-feature img {
+	height: 100%;
+}*/
 /*#first-feature img {
 	height: 100%;
 }*/
@@ -50,7 +57,7 @@
     
 }
 .image_container img{
-	
+	height: 100%;
 	width:100%;
 	background: transparent;
 	overflow:hidden;
@@ -89,17 +96,32 @@
     outline: 0;
  }
 
- /* ------------------------------------------RECENT CONTAINERS------------------------------------------------------------------------------------- */
+ #u_0_0 {
+ 	width:100%;
+ }
+ .fb-page span {
+ 	width:100;
+ } 
 
+ /* ------------------------------------------RECENT CONTAINERS------------------------------------------------------------------------------------- */
+.recent_posts {
+	padding:0px;
+	padding-right: 5px;
+}
+.cont_recent {
+	padding-left: 5px;
+	padding-right: 0px;
+}
 .recent-container .col-md-9 {
 	clear:both;
 	display: inline-block;
 	float: right;
 }
 .category_recent_post {
-	width:32.7%;
 	float:left;
-	margin-left: 5px;
+	width:100%;
+	/*width:32.7%;
+	margin-left: 5px;*/
 }
 
 

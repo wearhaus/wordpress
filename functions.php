@@ -26,7 +26,7 @@ if (function_exists('add_theme_support'))
 
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
-    add_image_size('large', 700, '', true); // Large Thumbnail
+    add_image_size('large', 1000, '', true); // Large Thumbnail
     add_image_size('medium', 275, '', true); // Medium Thumbnail
     add_image_size('small', 120, '', true); // Small Thumbnail
     add_image_size('recent', 300, '', true);// Recent Thumbnail
@@ -434,6 +434,8 @@ function custom_css() {
     wp_enqueue_style('sidebar_css', get_template_directory_uri() . '/css/sidebar.css');
     //search page css
     wp_enqueue_style('search_css', get_template_directory_uri() . '/css/search.css');
+    //mobile friendly
+    wp_enqueue_style('responsive_css', get_template_directory_uri() . '/css/responsive.css');
     /*base css
      wp_enqueue_style('base_css', get_template_directory_uri() . '/css/base.css');
      wp_enqueue_styel('base_css', get_template_directory_uri() . '/css/base.css')

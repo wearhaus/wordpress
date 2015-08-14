@@ -73,14 +73,26 @@
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - HEADER(INCLDUDES IMG+ BLOG NAVBAR) - - - - - - - - - - - - - - - - - - -->
 		<header class="header clear" role="banner">
             <div class="blog-navbar-container">
+                
                 <div class=" title-img" id="img-container">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/title_nav.jpg" alt="blog-pic">
-            </div> 
+                    <a href="<?php bloginfo('url');?>">
+                        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/title_nav.jpg" alt="blog-pic">
+                    </a>
+                </div> 
                 
                 <div class="blog-navbar" id="stickyheader">
-                    <div class="container"id="blognav_container">
-    				        <div class="col-md-10" >
-				                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <div class="container-fluid"id="blognav_container">
+                        <div class="row-fluid">
+    				        <div class="col-md-8" >
+				                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                     <a class="navbar-brand hidden" id ="blognavbar-logo" href="<?php bloginfo('url');?>">
                                         <img src="<?php bloginfo('stylesheet_directory'); ?>/img/Favicon_Black.png" alt="brand"/>
                                     </a>
@@ -108,21 +120,15 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="navbar-header">
-                				    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                   					    <span class="sr-only">Toggle navigation</span>
-                   					    <span class="icon-bar"></span>
-                 			            <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </button>
-                                </div>
-                            </div>
+                            </div>    
+                            
                             <!-- searchbar -->
                             <div class="col-md-2" id ="searchbar">
                                 <?php include (TEMPLATEPATH . '/searchform.php'); ?>
                             </div>
                             <!-- /searchbar -->
-                        </div>            
+                        </div>           
+                    </div> 
                 </div>
             </div>
             <div id="stickyalias"></div>

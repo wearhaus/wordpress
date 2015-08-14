@@ -1,3 +1,4 @@
+
 #featured-image {
 	padding-top: 5px;
 	overflow: hidden;
@@ -57,9 +58,7 @@ h1{
 	padding-bottom: 10px;
 }
 
-#content>p, #content>ul {
-	line-height: 200%;
-}
+
 
 iframe {
 	width: 100%;
@@ -94,6 +93,7 @@ iframe {
 }
 
 .related_cont {
+	float:left;
 	margin-left:4.1666666%;
 }
 /* -----------------------------------CSS FOR RELATED POSTS----------------------------------------- */
@@ -108,7 +108,7 @@ ul.related_post {
 }
 ul.related_post li {
 	margin-left: 5x !important;
-	margin-right: 5px !important;lo
+	margin-right: 5px !important;
 }
 ul.related_post li a {
 	font-size: 16px;
