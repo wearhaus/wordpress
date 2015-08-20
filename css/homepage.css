@@ -1,3 +1,9 @@
+#img-container-1 img, #img-container-2 img {
+	width: 100%;
+}
+#img-container-2 {
+	display:none;
+}
 #cont_feature {
 	padding:0px;
 }
@@ -19,9 +25,9 @@
 	overflow: hidden;
 
 }
-/*#first-feature img {
+#first-feature img {
 	height: 100%;
-}*/
+}
 /*#first-feature img {
 	height: 100%;
 }*/
@@ -57,7 +63,6 @@
     
 }
 .image_container img{
-	height: 100%;
 	width:100%;
 	background: transparent;
 	overflow:hidden;
@@ -84,7 +89,7 @@
 .caption-overlay {
     width: 100%;
     position: absolute;
-    bottom: 2px;
+    bottom: 0px;
 }
 .feature_title>a {
 	color: #FFF;

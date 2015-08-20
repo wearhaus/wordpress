@@ -70,7 +70,7 @@
 	
 }
 
-.text-container>p {
+.text-container .p_title {
 	margin: 0px;
 	padding: 0px;
 	display: inline;

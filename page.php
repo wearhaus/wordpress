@@ -1,45 +1,89 @@
-<?php get_header(); ?>
+<?php 
+	header('Access-Control-Allow-Origin: wearhaus.com');
+	header('Access-Control-Allow-Origin: www.wearhaus.com');    
+	//Featured Article 1
+	$original_query = $wp_query;
+	$wp_query = null;
+	$args=array('posts_per_page'=>1, 'tag' => 'featured_1');
+	$wp_query = new WP_Query( $args );
+	if ( have_posts() ) :
+					    while (have_posts()) : the_post();
+	$title_1 = get_the_title();
+	$url_1 = get_the_permalink(); 
 
-	<main role="main">
-		<!-- section -->
-		<section>
-			<div class="container">
-				<h1><?php the_title(); ?> </h1>
+	if (function_exists('has_post_thumbnail')) {
+	    if ( has_post_thumbnail() ) {
+	    	$thumb_id = get_post_thumbnail_id();
+			$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+			$thumb_url_1 = $thumb_url_array[0];
+	    }
+	}
+	endwhile;
+	endif;
+	$wp_query = null;
+	$wp_query = $original_query;
 
-				<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+	//Featured Article 2
+	$original_query = $wp_query;
+	$wp_query = null;
+	$args=array('posts_per_page'=>1, 'tag' => 'featured_2');
+	$wp_query = new WP_Query( $args );
+	if ( have_posts() ) :
+					    while (have_posts()) : the_post();
+	$title_2 = get_the_title();
+	$url_2 = get_the_permalink(); 
+	if (function_exists('has_post_thumbnail')) {
+	    if ( has_post_thumbnail() ) {
+	    	$thumb_id = get_post_thumbnail_id();
+			$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+			$thumb_url_2 = $thumb_url_array[0];
+	    }
+	}
+	endwhile;
+	endif;
+	$wp_query = null;
+	$wp_query = $original_query;
+	//Featured Article 3
+	$original_query = $wp_query;
+	$wp_query = null;
+	$args=array('posts_per_page'=>1, 'tag' => 'featured_3');
+	$wp_query = new WP_Query( $args );
+	if ( have_posts() ) :
+					    while (have_posts()) : the_post();
+	$title_3 = get_the_title();
+	$url_3 = get_the_permalink(); 
+	if (function_exists('has_post_thumbnail')) {
+	    if ( has_post_thumbnail() ) {
+	    	$thumb_id = get_post_thumbnail_id();
+			$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+			$thumb_url_3 = $thumb_url_array[0];
+	    }
+	}
+	endwhile;
+	endif;
+	$wp_query = null;
+	$wp_query = $original_query;
 
-				<!-- article -->
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+//Creating JSON object
+$json = json_encode(array(
+     "featured" => array(
+        "title" => $title_1,
+        "url" => $url_1,
+        "img_url" => $thumb_url_1
+     ),
+     "featured-2" => array(
+        "title" => $title_2,
+        "url" => $url_2,
+        "img_url" => $thumb_url_2
+     ),
+     "feature-3" => array(
+        "title" => $title_3,
+        "url" => $url_3,
+        "img_url" => $thumb_url_3
+     )
+));
 
-					<?php the_content(); ?>
+echo $json;
 
-					<?php comments_template( '', true ); // Remove if you don't want comments ?>
 
-					<br class="clear">
-
-					<?php edit_post_link(); ?>
-
-				</article>
-				<!-- /article -->
-
-				<?php endwhile; ?>
-
-				<?php else: ?>
-
-				<!-- article -->
-				<article>
-
-					<h2><?php _e( 'Sorry, nothing to display.', 'wearhaus' ); ?></h2>
-
-				</article>
-				<!-- /article -->
-
-				<?php endif; ?>
-			</div>
-		</section>
-		<!-- /section -->
-	</main>
-
-<?php get_sidebar(); ?>
-
-<?php get_footer(); ?>
+?>

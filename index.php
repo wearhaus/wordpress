@@ -13,6 +13,7 @@
 					        ?>
 					        <a id = 'feature_title-a'href="<?php the_permalink()?>" title="<?php the_title(); ?>">
 					        <div class="image_container" >
+					        	<span class="caption-overlay caption-overlay-1" style="background: url(<?php bloginfo('stylesheet_directory'); ?>/img/overlay2.png) repeat-x 0 0;"></span>
 					        	<?php
 					        
 					        	if (function_exists('has_post_thumbnail')) {
@@ -21,7 +22,7 @@
 								    }
 								}
 								?>
-					        	<span class="caption-overlay caption-overlay-1" style="background: url(<?php bloginfo('stylesheet_directory'); ?>/img/overlay2.png) repeat-x 0 0;"></span>
+					        	
 								<div class='feature_title'>
 									<a id = 'feature_title-a'href="<?php the_permalink()?>" title="<?php the_title(); ?>">
 									
@@ -48,15 +49,16 @@
 					        ?>
 					        <a id = 'feature_title-a'href="<?php the_permalink()?>" title="<?php the_title(); ?>">
 					        <div class="image_container" >
+					        	<span class="caption-overlay caption-overlay-1" style="background: url(<?php bloginfo('stylesheet_directory'); ?>/img/overlay2.png) repeat-x 0 0;"></span>
 					        	<?php
 					        
 					        	if (function_exists('has_post_thumbnail')) {
 								    if ( has_post_thumbnail() ) {
-								    	the_post_thumbnail();
+								    	the_post_thumbnail('large');
 								    }
 								}
 								?>
-					        	<span class="caption-overlay caption-overlay-1" style="background: url(<?php bloginfo('stylesheet_directory'); ?>/img/overlay2.png) repeat-x 0 0;"></span>
+					        	
 								<div class='feature_title'>
 									<a id = 'feature_title-a'href="<?php the_permalink()?>" title="<?php the_title(); ?>">
 									
@@ -83,15 +85,16 @@
 					        ?>
 					        <a id = 'feature_title-a'href="<?php the_permalink()?>" title="<?php the_title(); ?>">
 					        <div class="image_container" >
+					        	<span class="caption-overlay caption-overlay-1" style="background: url(<?php bloginfo('stylesheet_directory'); ?>/img/overlay2.png) repeat-x 0 0;"></span>
 					        	<?php
 					        
 					        	if (function_exists('has_post_thumbnail')) {
 								    if ( has_post_thumbnail() ) {
-								    	the_post_thumbnail();
+								    	the_post_thumbnail('large');
 								    }
 								}
 								?>
-					        	<span class="caption-overlay caption-overlay-1" style="background: url(<?php bloginfo('stylesheet_directory'); ?>/img/overlay2.png) repeat-x 0 0;"></span>
+					        	
 								<div class='feature_title'>
 									<a id = 'feature_title-a'href="<?php the_permalink()?>" title="<?php the_title(); ?>">
 									
@@ -170,7 +173,7 @@
 			<div class="col-md-3 sidebar_p1 sidebar_p2" >
 				<div class="sidebar_header" id="tw_sb">
 					<div class="text-container">
-						<p>FOLLOW US</p> on twitter
+						<p class="p_title">FOLLOW US</p> on twitter
 					</div>
 				</div>
 				<div class="sidebar_body" id="tw_sb_body">
@@ -179,7 +182,7 @@
 				</div>
 				<div class="sidebar_header" id="ig_sb">
 					<div class="text-container">
-						<p>FOLLOW US</p> on instagram 
+						<p class="p_title">FOLLOW US</p> on instagram
 					</div>
 				</div>
 				<div class="sidebar_body" id="ig_sb_body">
@@ -189,7 +192,7 @@
 				</div>   
 				<div class="sidebar_header" id="fb_sb">
 					<div class="text-container">
-						<p>LIKE US</p> on facebook 
+						<p class="p_title">LIKE US</p> on facebook<p>
 					</div>
 				</div>
 				<div class="sidebar_body" id="fb_sb_body">
