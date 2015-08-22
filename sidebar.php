@@ -3,7 +3,9 @@
 	<div class="col-md-3 sidebar_p1" >
 		<div class="sidebar_header" id="mp_sb"> 
 			<div class="text-container">
+
 				<p class="p_title">MOST POPULAR</p>
+
 			</div>
 		</div>
 		<div class="sidebar_body" >
@@ -33,7 +35,9 @@
 		</div>
 		<div class="sidebar_header" id="tw_sb">
 			<div class="text-container">
+
 				<p class="p_title">FOLLOW US</p> on Twitter 
+
 			</div>
 		</div>
 		<div class="sidebar_body" id="tw_sb_body">
@@ -42,7 +46,9 @@
 		</div>
 		<div class="sidebar_header" id="ig_sb">
 			<div class="text-container">
+
 				<p class="p_title">FOLLOW US</p> on Instagram 
+
 			</div>
 		</div>
 		<div class="sidebar_body" id="ig_sb_body">
@@ -52,7 +58,9 @@
 		</div>   
 		<div class="sidebar_header" id="fb_sb">
 			<div class="text-container">
+
 				<p class="p_title">LIKE US</p> on Facebook 
+
 			</div>
 		</div>
 		<div class="sidebar_body" id="fb_sb_body">

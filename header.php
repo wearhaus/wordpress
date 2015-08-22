@@ -95,7 +95,7 @@
                         <?php $category_id = get_cat_ID( 'Product Updates' ); ?>
                         <a href="<?php echo get_category_link( $category_id ); ?>">Product Updates</a>
                     </li>
-                    
+
                 </ul>
 
             </div>
@@ -150,12 +150,21 @@
             <div class="blog-navbar-container">
                 
                 <div class=" title-img" id="img-container-1">
+
                     <a href="<?php bloginfo('url');?>">
                         <img src="<?php bloginfo('stylesheet_directory'); ?>/img/title_nav_1.png" alt="blog-pic">
                     </a>
                 </div>
                 <div class=" title-img" id="img-container-2">
                     <a href="<?php bloginfo('url');?>">
+
+                    <a href="<?php bloginfo('url');?>">
+                        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/title_nav_1.png" alt="blog-pic">
+                    </a>
+                </div>
+                <div class=" title-img" id="img-container-2">
+                    <a href="<?php bloginfo('url');?>">
+
                         <img src="<?php bloginfo('stylesheet_directory'); ?>/img/mobile-banner.png" alt="blog-pic">
                     </a>
                 </div> 

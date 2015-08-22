@@ -1,4 +1,5 @@
 <?php 
+
 	header('Access-Control-Allow-Origin: *');
 	header('Access-Control-Allow-Methods: GET, POST');  
 	headers_list();
@@ -15,7 +16,10 @@
 	if (function_exists('has_post_thumbnail')) {
 	    if ( has_post_thumbnail() ) {
 	    	$thumb_id = get_post_thumbnail_id();
-			$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'small', true);
+
+
+			$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'large', true);
+
 			$thumb_url_1 = $thumb_url_array[0];
 	    }
 	}
@@ -36,7 +40,7 @@
 	if (function_exists('has_post_thumbnail')) {
 	    if ( has_post_thumbnail() ) {
 	    	$thumb_id = get_post_thumbnail_id();
-			$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+			$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'large', true);
 			$thumb_url_2 = $thumb_url_array[0];
 	    }
 	}
@@ -56,7 +60,7 @@
 	if (function_exists('has_post_thumbnail')) {
 	    if ( has_post_thumbnail() ) {
 	    	$thumb_id = get_post_thumbnail_id();
-			$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+			$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'large', true);
 			$thumb_url_3 = $thumb_url_array[0];
 	    }
 	}
@@ -67,17 +71,23 @@
 
 //Creating JSON object
 $json = json_encode(array(
+
      "featured_1" => array(
+
         "title" => $title_1,
         "url" => $url_1,
         "img_url" => $thumb_url_1
      ),
+
      "featured_2" => array(
+
         "title" => $title_2,
         "url" => $url_2,
         "img_url" => $thumb_url_2
      ),
+
      "featured_3" => array(
+
         "title" => $title_3,
         "url" => $url_3,
         "img_url" => $thumb_url_3

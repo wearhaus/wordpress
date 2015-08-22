@@ -176,7 +176,9 @@
 			<div class="col-md-3 sidebar_p1 sidebar_p2" >
 				<div class="sidebar_header" id="tw_sb">
 					<div class="text-container">
+
 						<p class="p_title">FOLLOW </p> on Twitter
+
 					</div>
 				</div>
 				<div class="sidebar_body" id="tw_sb_body">
@@ -185,7 +187,9 @@
 				</div>
 				<div class="sidebar_header" id="ig_sb">
 					<div class="text-container">
+
 						<p class="p_title">FOLLOW </p> on Instagram
+
 					</div>
 				</div>
 				<div class="sidebar_body" id="ig_sb_body">
@@ -195,7 +199,9 @@
 				</div>   
 				<div class="sidebar_header" id="fb_sb">
 					<div class="text-container">
+
 						<p class="p_title">LIKE </p> on Facebook<p>
+
 					</div>
 				</div>
 				<div class="sidebar_body" id="fb_sb_body">
