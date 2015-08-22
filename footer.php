@@ -57,7 +57,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <p>&copy; 2015. Wearhaus. All rights reserved.</p>
+                        <p>&copy; 2015. Wearhaus Inc. All rights reserved.</p>
                     </div>
                 </div>
             </div>

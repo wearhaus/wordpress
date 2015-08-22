@@ -3,7 +3,7 @@
 	<div class="col-md-3 sidebar_p1" >
 		<div class="sidebar_header" id="mp_sb"> 
 			<div class="text-container">
-				Most Popular ///
+				<p class="p_title">MOST POPULAR</p>
 			</div>
 		</div>
 		<div class="sidebar_body" >
@@ -15,8 +15,12 @@
 			?>
 			<div class="mp_img">
 				<?php
-					if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-						the_post_thumbnail();
+					if ( has_post_thumbnail() ) {// check if the post has a Post Thumbnail assigned to it.
+					?>
+						
+						<?php the_post_thumbnail();
+						
+						
 					} 
 				?>
 			</div>
@@ -29,7 +33,7 @@
 		</div>
 		<div class="sidebar_header" id="tw_sb">
 			<div class="text-container">
-				<p>FOLLOW US</p> on twitter ///
+				<p class="p_title">FOLLOW US</p> on Twitter 
 			</div>
 		</div>
 		<div class="sidebar_body" id="tw_sb_body">
@@ -38,7 +42,7 @@
 		</div>
 		<div class="sidebar_header" id="ig_sb">
 			<div class="text-container">
-				<p>FOLLOW US</p> on instagram /// 
+				<p class="p_title">FOLLOW US</p> on Instagram 
 			</div>
 		</div>
 		<div class="sidebar_body" id="ig_sb_body">
@@ -48,7 +52,7 @@
 		</div>   
 		<div class="sidebar_header" id="fb_sb">
 			<div class="text-container">
-				<p>LIKE US</p> on facebook /// 
+				<p class="p_title">LIKE US</p> on Facebook 
 			</div>
 		</div>
 		<div class="sidebar_body" id="fb_sb_body">
@@ -58,7 +62,7 @@
 		</div>                                          
 		<!--<div class="sidebar_header" id="ig_sb">
 			<div class="text-container">
-				<p>FOLLOW US</p> on twitter ///
+				<p>FOLLOW US</p> on twitter 
 			</div>
 		</div>
 		<div class="sidebar_body" id="ig_sb_body">

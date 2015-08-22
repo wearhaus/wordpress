@@ -28,9 +28,9 @@ if (function_exists('add_theme_support'))
     add_theme_support('post-thumbnails');
     add_image_size('large', 1000, '', true); // Large Thumbnail
     add_image_size('medium', 275, '', true); // Medium Thumbnail
-    add_image_size('small', 120, '', true); // Small Thumbnail
+    add_image_size('small', 640, '', true); // Small Thumbnail
     add_image_size('recent', 300, '', true);// Recent Thumbnail
-    add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+    add_image_size('custom-size', 640, '', true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     /*add_theme_support('custom-background', array(
@@ -436,6 +436,10 @@ function custom_css() {
     wp_enqueue_style('search_css', get_template_directory_uri() . '/css/search.css');
     //mobile friendly
     wp_enqueue_style('responsive_css', get_template_directory_uri() . '/css/responsive.css');
+    //Adding bootstrap.js
+    wp_enqueue_script( 'bootstrap.js', get_template_directory_uri() . '/js/bootstrap.js', array(), '1.0.0', true );
+    //Adding jquery.js
+    wp_enqueue_script( 'jquery.js', get_template_directory_uri() . '/js/jquery-1.11.3.min.js', array(), '1.0.0', true );
     /*base css
      wp_enqueue_style('base_css', get_template_directory_uri() . '/css/base.css');
      wp_enqueue_styel('base_css', get_template_directory_uri() . '/css/base.css')
@@ -445,12 +449,7 @@ add_action('wp_enqueue_scripts', 'custom_css');
 //-----------------------------------------------------------------------------------------------------------------------------
 
 //--------------------------------ADDING JQUERY -------------------------------------------------------------------------------
-if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
-function my_jquery_enqueue() {
-   wp_deregister_script('jquery');
-   wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", false, null);
-   wp_enqueue_script('jquery');
-}
+
 //-----------------------------------------------------------------------------------------------------------------------------
 
 

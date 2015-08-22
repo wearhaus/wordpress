@@ -12,35 +12,27 @@
     line-height: 70px;
 }
 
+.nav>li {
+    text-align: center;
+}
+
 .navbar {
-        background: rgba(0, 0, 0, 0.7); /* make background translucent */
+        background: rgba(0, 0, 0, 0.8); /* make background translucent */
         font-family: "Lato", arial, sans-serif;
-        font-weight: 300;
-        /*font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-        font-weight: 700;*/
+        font-weight: 700;
         margin-bottom: 0px;
         padding: 10px 0;
         text-transform: uppercase;
-        border-radius: 0px;
-}
+    }
 
-        .navbar a:focus {
-            outline: 0;
+        .navbar a {
+            font-weight: 300;
+            text-transform: uppercase;
         }
 
         .navbar .navbar-nav {
             letter-spacing: 1px;
         }
-
-        .navbar .navbar-nav li a:focus {
-            outline: 0;
-        }
-
-.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus  {
-    transition: color 0.2s ease;
-    color: #00bbcc;
-    outline: 0;
- }
 
 .navbar-default,
 .navbar-inverse {
@@ -51,12 +43,22 @@
     color: white;
 }
 
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+    transition: color 0.2s ease;
+    color: #00bccc;
+    outline: 0;
+ }
+
 .navbar-brand { /* CSS for Wearhaus logo */
     padding: 5px 15px;
 }
 
+#mailingListModal .modal-body {
+    height: 420px; 
+}
+
 #order_now {
-    margin-left: 15px;
+    margin: 0 15px 0 15px;
     padding-top: 5px;
 }
 
@@ -64,16 +66,57 @@
     background-color: #00bccc;
     border-radius: 5px;
     padding: 10px 15px 10px 15px;
+    width: 126px;
 }
 
-    #order_now_link:hover, #order_now_link:focus {
+    #order_now_link:hover, #order_now_link:focus,
+    #order_now_link_mobile:hover, #order_now_link_mobile:focus {
         transition: color 0.3s ease;
         background-color: #33C9D6; /* make background lighter on hover/focus */
         color: white;
     }
 
-/*-----------------------------------------------------BLOG NAVBAR CSS ----------------------------------------------------*/
+#order_now_link_mobile {
+    display: none;
+}
 
+@media(max-width: 767px) {
+
+    .navbar-brand {
+        padding: 10px 15px;
+    }
+
+        .navbar-brand img {
+            height: 100%;
+        }
+
+    #order_now_link_mobile {
+        background-color: #00bccc;
+        border-radius: 5px;
+        color: white;
+        display: block;
+        height: 34px;
+        line-height: 24px;
+        margin: 8px auto;
+        padding: 5px 15px 5px 15px;
+        text-align: center;
+        width: 117px;
+    }
+
+    #order_now {
+        display: none;
+    }
+}
+
+/*-----------------------------------------------------BLOG NAVBAR CSS ----------------------------------------------------*/
+.collapse-blog {
+    display: none;
+    background-color: #EDEDED;
+    font-style: black;
+}
+.collapse-blog>li>a{
+    color:black;
+}
 #searchbar {
     padding-top:15px;
     padding-left: 40px;
@@ -128,4 +171,7 @@
     margin-left: 15px;
     padding-left: 0px;
     padding-right: 0px;
+}
+.collapse-blog>li>a{
+    color:black !important;
 }

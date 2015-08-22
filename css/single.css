@@ -1,4 +1,6 @@
-
+.cat_post_content {
+	margin-left: 4.1666666%;
+}
 #featured-image {
 	padding-top: 5px;
 	overflow: hidden;
@@ -37,10 +39,18 @@ h1{
 	background-color: #EDEDED;
 	
 }
+.i5 {
+	margin-left: 4.1666666%;
+}
+#cont_a {
+	padding-left:0px;
+ 	padding-right:0px;
+}
  #post_content {
  	float: left;
  	margin-top: -10px;
-	margin-left: 4.1666666%;
+ 	padding-left:0px;
+ 	padding-right:0px;
  }
 
 #content {
@@ -79,7 +89,7 @@ iframe {
 
 	padding-left: 25px;
 	padding-top: 20px;
-	padding-right: 25px;
+	/*padding-right: 25px;*/
 	padding-bottom: 10px;
 	margin-bottom: 25px;
 }
@@ -94,7 +104,8 @@ iframe {
 
 .related_cont {
 	float:left;
-	margin-left:4.1666666%;
+	padding-left:0px;
+ 	padding-right:0px;
 }
 /* -----------------------------------CSS FOR RELATED POSTS----------------------------------------- */
 .wp_rp_content, .wp_rp_content ul {
@@ -122,6 +133,4 @@ ul.related_post li img {
 	display: none;
 }
 .related_articles {
-
-	padding-left: 45px;
 }

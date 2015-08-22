@@ -3,7 +3,7 @@
 	<div class="page-main" id="body-main">
 		<div class="container-fluid">
 				<div class="row-fluid">
-					<div class="col-md-8" id="post_content">
+					<div class="col-md-8 cat_post_content" id="post_content ">
 						<div id="search_content">
 							<h1 id="post_title">
 								<?php _e( 'Category:  ', 'html5blank' ); single_cat_title(); ?>

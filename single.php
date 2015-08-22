@@ -9,7 +9,7 @@
 				<div class="col-md-11" id="featured-image">
 					<?php 
 						if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-							the_post_thumbnail();
+							the_post_thumbnail('large');
 						} 
 					?>
 				</div>
@@ -18,39 +18,40 @@
 		<!-- /post thumbnail -->
 		<div class="container-fluid">
 			<div class="row-fluid">
-				<div class="col-md-8" id="post_content">
-					<!-- article -->
-					<?php if (have_posts()): while (have_posts()) : the_post(); 
-					setPostViews(get_the_ID());
-					?>
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<div id="content">
-							<!-- post title -->
-							<!--<h1 id="post_title">
-								<?php //the_title(); ?>
-							</h1> -->
-							<!-- /post title -->
+				<div class="col-md-8 i5">
+					<div class="container-fluid" id="cont_a">
+						<div class="row-fluid">
+							<div class="col-md-12" id="post_content">
+								<!-- article -->
+								<?php if (have_posts()): while (have_posts()) : the_post(); 
+								setPostViews(get_the_ID());
+								?>
+								<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+									<div id="content">
+										<!-- post title -->
+										<!--<h1 id="post_title">
+											<?php //the_title(); ?>
+										</h1> -->
+										<!-- /post title -->
 
-							<!-- post details 
-							<span class="date"><?php //the_time('F j, Y'); ?> <?php //the_time('g:i a'); ?></span>
-							<!-- <span class="author"><?php //_e( 'Published by', 'html5blank' ); ?> <?php //the_author_posts_link(); ?></span>
-							<span class="comments"><?php //if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-							<!-- /post details -->
-							<?php //[twitter_follow screen_name="wearhausinc"] ?>
-							<?php the_content(); // Dynamic Content ?>
+										<!-- post details 
+										<span class="date"><?php //the_time('F j, Y'); ?> <?php //the_time('g:i a'); ?></span>
+										<!-- <span class="author"><?php //_e( 'Published by', 'html5blank' ); ?> <?php //the_author_posts_link(); ?></span>
+										<span class="comments"><?php //if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
+										<!-- /post details -->
+										<?php //[twitter_follow screen_name="wearhausinc"] ?>
+										<?php the_content(); // Dynamic Content ?>
 
-							<div class="tags">
-								<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+										<div class="tags">
+											<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+										</div>
+
+										<p><?php _e( 'Categorized in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
+									</div>
+								</article>
 							</div>
 
-							<p><?php _e( 'Categorized in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
-						</div>
-					</article>
-					</div>
-				<?php get_sidebar(); ?>
-			</div>
-						<div class="row-fluid">
-							<div class="col-md-8 related_cont">
+							<div class="col-md-12 related_cont">
 								<div class="related_articles">
 									<?php wp_related_posts()?>
 								</div>
@@ -58,28 +59,12 @@
 									<?php comments_template(); ?>
 								</div>
 							</div>
-							
 						</div>
-						
-						<!--DISQUS
-						<div class="comment_section">
-							<div id="disqus_thread"></div>
-								<script type="text/javascript">
-								    /* * * CONFIGURATION VARIABLES * * */
-								    // Required: on line below, replace text in quotes with your forum shortname
-								    var disqus_shortname = 'wearhaus';
-								    
-								    /* * * DON'T EDIT BELOW THIS LINE * * */
-								    (function() {
-								        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-								        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-								        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-								    })();
-								</script>
-								<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-						</div>	-->
-					
-				
+					</div>
+				</div>
+				<?php get_sidebar(); ?>
+			</div>
+
 		</div>
 		<!-- /article -->
 

@@ -13,6 +13,7 @@
 					        ?>
 					        <a id = 'feature_title-a'href="<?php the_permalink()?>" title="<?php the_title(); ?>">
 					        <div class="image_container" >
+					        	<span class="caption-overlay caption-overlay-1" style="background: url(<?php bloginfo('stylesheet_directory'); ?>/img/overlay2.png) repeat-x 0 0;"></span>
 					        	<?php
 					        
 					        	if (function_exists('has_post_thumbnail')) {
@@ -21,7 +22,7 @@
 								    }
 								}
 								?>
-					        	<span class="caption-overlay caption-overlay-1" style="background: url(<?php bloginfo('stylesheet_directory'); ?>/img/overlay2.png) repeat-x 0 0;"></span>
+					        	
 								<div class='feature_title'>
 									<a id = 'feature_title-a'href="<?php the_permalink()?>" title="<?php the_title(); ?>">
 									
@@ -48,15 +49,16 @@
 					        ?>
 					        <a id = 'feature_title-a'href="<?php the_permalink()?>" title="<?php the_title(); ?>">
 					        <div class="image_container" >
+					        	<span class="caption-overlay caption-overlay-1" style="background: url(<?php bloginfo('stylesheet_directory'); ?>/img/overlay2.png) repeat-x 0 0;"></span>
 					        	<?php
 					        
 					        	if (function_exists('has_post_thumbnail')) {
 								    if ( has_post_thumbnail() ) {
-								    	the_post_thumbnail();
+								    	the_post_thumbnail('large');
 								    }
 								}
 								?>
-					        	<span class="caption-overlay caption-overlay-1" style="background: url(<?php bloginfo('stylesheet_directory'); ?>/img/overlay2.png) repeat-x 0 0;"></span>
+					        	
 								<div class='feature_title'>
 									<a id = 'feature_title-a'href="<?php the_permalink()?>" title="<?php the_title(); ?>">
 									
@@ -83,15 +85,16 @@
 					        ?>
 					        <a id = 'feature_title-a'href="<?php the_permalink()?>" title="<?php the_title(); ?>">
 					        <div class="image_container" >
+					        	<span class="caption-overlay caption-overlay-1" style="background: url(<?php bloginfo('stylesheet_directory'); ?>/img/overlay2.png) repeat-x 0 0;"></span>
 					        	<?php
 					        
 					        	if (function_exists('has_post_thumbnail')) {
 								    if ( has_post_thumbnail() ) {
-								    	the_post_thumbnail();
+								    	the_post_thumbnail('large');
 								    }
 								}
 								?>
-					        	<span class="caption-overlay caption-overlay-1" style="background: url(<?php bloginfo('stylesheet_directory'); ?>/img/overlay2.png) repeat-x 0 0;"></span>
+					        	
 								<div class='feature_title'>
 									<a id = 'feature_title-a'href="<?php the_permalink()?>" title="<?php the_title(); ?>">
 									
@@ -130,8 +133,9 @@
 						query_posts($args); // reset to original
 
 						if (have_posts()) :
+							$category_id = get_cat_ID($cat);
 							
-						echo '<div class="post_title" id="cat_title"><p>'.$cat->name.' ///</p></div>';
+						echo '<div class="post_title" id="cat_title"><p>'.$cat->name.' </p></div>';
 		
 						echo '<div class="small_category"><div class="container-fluid cont_recent"><div class="row-fluid">';
 						$count = 0;
@@ -140,9 +144,11 @@
 				<?php while (have_posts()) : the_post(); ?>		
 				<div class="col-md-4 recent_posts post_<?php echo $count; ?>">
 					<div class="category_recent_post">
+						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
 						<div class="category_post_thumb">
 							<?php the_post_thumbnail('medium'); ?>
 						</div>
+						</a>
 						<div class="cat_title_container">
 							<div class="category_post_title">
 							  	<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
@@ -170,7 +176,7 @@
 			<div class="col-md-3 sidebar_p1 sidebar_p2" >
 				<div class="sidebar_header" id="tw_sb">
 					<div class="text-container">
-						<p>FOLLOW US</p> on twitter
+						<p class="p_title">FOLLOW </p> on Twitter
 					</div>
 				</div>
 				<div class="sidebar_body" id="tw_sb_body">
@@ -179,7 +185,7 @@
 				</div>
 				<div class="sidebar_header" id="ig_sb">
 					<div class="text-container">
-						<p>FOLLOW US</p> on instagram 
+						<p class="p_title">FOLLOW </p> on Instagram
 					</div>
 				</div>
 				<div class="sidebar_body" id="ig_sb_body">
@@ -189,12 +195,12 @@
 				</div>   
 				<div class="sidebar_header" id="fb_sb">
 					<div class="text-container">
-						<p>LIKE US</p> on facebook 
+						<p class="p_title">LIKE </p> on Facebook<p>
 					</div>
 				</div>
 				<div class="sidebar_body" id="fb_sb_body">
 					<div class="sidebar-widget">
-						<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
+						<div class="fb-page" data-href="https://www.facebook.com/wearhausinc" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/wearhausinc"><a href="https://www.facebook.com/wearhausinc">Wearhaus Inc.</a></blockquote></div></div></div>
 					</div>
 				</div>
 				                                        
