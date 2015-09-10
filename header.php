@@ -89,13 +89,12 @@
                     </li>
                     <li class="page-scroll">
                         <?php $category_id = get_cat_ID( 'Fun & Events' ); ?>
-                        <a href="<?php echo get_category_link( $category_id ); ?>">Fun & Events</a>
+                        <a href="<?php echo get_category_link( 3 ); ?>">Fun & Events</a>
                     </li>
                     <li class="page-scroll">
                         <?php $category_id = get_cat_ID( 'Product Updates' ); ?>
                         <a href="<?php echo get_category_link( $category_id ); ?>">Product Updates</a>
                     </li>
-
                 </ul>
 
             </div>
@@ -198,13 +197,12 @@
                                         </li>
                                         <li class="page-scroll">
                                             <?php $category_id = get_cat_ID( 'Fun & Events' ); ?>
-                                            <a href="<?php echo get_category_link( $category_id ); ?>">Fun & Events</a>
+                                            <a href="<?php echo get_category_link(3); ?>">Fun & Events</a>
                                         </li>
                                         <li class="page-scroll">
                                             <?php $category_id = get_cat_ID( 'Product Updates' ); ?>
                                             <a href="<?php echo get_category_link( $category_id ); ?>">Product Updates</a>
                                         </li>
-                                       
                                     </ul>
                                 </div>
                             </div>    
