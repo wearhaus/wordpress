@@ -88,8 +88,8 @@
                         <a href="<?php echo get_category_link( $category_id ); ?> ">Artists</a>
                     </li>
                     <li class="page-scroll">
-                        <?php $category_id = get_cat_ID( 'Events' ); ?>
-                        <a href="<?php echo get_category_link( $category_id ); ?>">Events</a>
+                        <?php $category_id = get_cat_ID( 'Fun & Events' ); ?>
+                        <a href="<?php echo get_category_link( $category_id ); ?>">Fun & Events</a>
                     </li>
                     <li class="page-scroll">
                         <?php $category_id = get_cat_ID( 'Product Updates' ); ?>
@@ -197,8 +197,8 @@
                                             <a href="<?php echo get_category_link( $category_id ); ?> ">Artists</a>
                                         </li>
                                         <li class="page-scroll">
-                                            <?php $category_id = get_cat_ID( 'Events' ); ?>
-                                            <a href="<?php echo get_category_link( $category_id ); ?>">Events</a>
+                                            <?php $category_id = get_cat_ID( 'Fun & Events' ); ?>
+                                            <a href="<?php echo get_category_link( $category_id ); ?>">Fun & Events</a>
                                         </li>
                                         <li class="page-scroll">
                                             <?php $category_id = get_cat_ID( 'Product Updates' ); ?>
