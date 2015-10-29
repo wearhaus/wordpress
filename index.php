@@ -133,9 +133,12 @@
 						query_posts($args); // reset to original
 
 						if (have_posts()) :
-							$category_id = get_cat_ID($cat);
+							$category_id = get_cat_ID($cat->name);
+
+						// Get the URL of this category
+					    $category_link = get_category_link( $category_id );
 							
-						echo '<div class="post_title" id="cat_title"><p>'.$cat->name.' </p></div>';
+						echo '<a href="'.$category_link.'"><div class="post_title" id="cat_title"><p>'.$cat->name.' </p></div></a>';
 		
 						echo '<div class="small_category"><div class="container-fluid cont_recent"><div class="row-fluid">';
 						$count = 0;
