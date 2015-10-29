@@ -135,7 +135,6 @@
 						if (have_posts()) :
 							$category_id = get_cat_ID($cat->name);
 
-						// Get the URL of this category
 					    $category_link = get_category_link( $category_id );
 							
 						echo '<a href="'.$category_link.'"><div class="post_title" id="cat_title"><p>'.$cat->name.' </p></div></a>';
