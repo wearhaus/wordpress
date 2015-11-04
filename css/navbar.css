@@ -23,6 +23,7 @@
         margin-bottom: 0px;
         padding: 10px 0;
         text-transform: uppercase;
+        border-radius: 0px; /* override Bootstrap rounding corners of navbar */
     }
 
         .navbar a {
