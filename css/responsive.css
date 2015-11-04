@@ -30,10 +30,6 @@
             height: 798px;
         }
 
-        .navbar {
-            border-radius: 0px; /* override Bootstrap rounding corners of navbar */
-        }
-
         .container-mobile, .section-mobile {
             display: none;
         }
