@@ -196,7 +196,7 @@
 				</div>
 				<div class="sidebar_body" id="ig_sb_body">
 					<div class="sidebar-widget">
-						<?php echo do_shortcode('[instagram-feed height=600]'); ?>
+						<?php echo do_shortcode('[instagram-feed]'); ?>
 					</div>
 				</div>   
 				<div class="sidebar_header" id="fb_sb">
