@@ -48,7 +48,7 @@ Login to bluehost.com
 
 On the File Manager, go to themes. Delete the entire wearhaus theme folder.
 
-Zip the locally hosted them files.
+Zip the locally hosted theme files.
 
 Go to the Wordpress Dashboard of the blog.
 
