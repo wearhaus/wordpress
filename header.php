@@ -172,7 +172,7 @@
                                     </button>
                                 </div>
                                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                    <a class="navbar-brand hidden" id ="blognavbar-logo" href="<?php bloginfo('url');?>">
+                                    <a class="navbar-brand logo-hidden" id ="blognavbar-logo" href="<?php bloginfo('url');?>">
                                         <img src="<?php bloginfo('stylesheet_directory'); ?>/img/Favicon_Black.png" alt="brand"/>
                                     </a>
                                     <ul class="nav navbar-nav navbar-left blognav blognav2" id="navbar_blog">

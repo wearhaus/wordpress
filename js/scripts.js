@@ -15,7 +15,7 @@
            }
         })
         .resize();
-        var stickyHeaderTop = $('.stickyheader').offset().top;
+        var stickyHeaderTop = $('.stickyheader').offset().top - 16;
         console.log(stickyHeaderTop);
         $(window).scroll(function(){
 
@@ -25,10 +25,10 @@
                         $('#body-main').css({'padding-top': '50px'});
 
                         //adding blog-navbar logo
-                        $('#blognavbar-logo').removeClass('hidden');
+                        $('#blognavbar-logo').removeClass('logo-hidden');
 
                         //changing color of blog-navbar
-                        $('.stickyheader').css({'transition': 'background-color 0.2s ease', 'background-color': '#F9F9F9'});
+                        $('.stickyheader').css({'background-color': '#F9F9F9'});
                         
                         //changing color of searchbar
                         $('#searchbar').removeClass('scrolled-up');
@@ -42,10 +42,10 @@
                         $('#body-main').css({'padding-top': '0px'});
                         
                         //removing blog-navbar logo
-                        $('#blognavbar-logo').addClass('hidden');
+                        $('#blognavbar-logo').addClass('logo-hidden');
                         
                         //changing color of blog-navbar
-                        $('.stickyheader').css({'transition': 'background-color 0.2s ease', 'background-color': '#EDEDED'});
+                        $('.stickyheader').css({'background-color': '#EDEDED'});
                         
                         //changing color of searchbar
                         $('#searchbar').removeClass('scrolled-down');

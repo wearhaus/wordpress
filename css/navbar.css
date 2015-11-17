@@ -126,11 +126,12 @@
 .blog-navbar {
     text-decoration: none;
     background-color: #EDEDED;
-    padding-top:5px;
     padding-left: 5%;
     color: black;
     clear:both;
     z-index: 99;
+    -webkit-transition: width 0.2s ease;
+    transition: width 0.2s ease;
 }
 .blog-navbar>li>a:hover, .blog-navbar>li>a:focus  {
     transition: color 0.2s ease;
@@ -148,6 +149,19 @@
 .blog-navbar-container {
     clear:both;
 }
+
+#blognavbar-logo {
+    -webkit-transition: width 0.5s ease;
+    transition: width 0.5s ease;
+    width: 80px;
+    padding: 5px 15px;
+    overflow: hidden;
+}
+
+.logo-hidden {
+    width: 0px !important;
+    padding: 5px 0px !important;
+ }
 
 .navbar-collapse {
     padding-left: 0;
