@@ -31,8 +31,7 @@
                         $('.stickyheader').css({'background-color': '#F9F9F9'});
                         
                         //changing color of searchbar
-                        $('#searchbar').removeClass('scrolled-up');
-                        $('#searchbar').addClass('scrolled-down');
+                        $('#search').css({'background-color': '#EDEDED'});
 
                         //adjusting the links on navbar
                         $('#navbar_blog').removeClass('blognav2');
@@ -48,8 +47,7 @@
                         $('.stickyheader').css({'background-color': '#EDEDED'});
                         
                         //changing color of searchbar
-                        $('#searchbar').removeClass('scrolled-down');
-                        $('#searchbar').addClass('scrolled-up');
+                        $('#search').css({'background-color': '#F9F9F9'});
 
                         //adjusting links on navbar
                         $('#navbar_blog').addClass('blognav2');
