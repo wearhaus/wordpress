@@ -30,6 +30,19 @@ h1{
 .i5 {
 	margin-left: 4.1666666%;
 }
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
 #cont_a {
 	padding-left:0px;
  	padding-right:0px;
