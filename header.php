@@ -5,8 +5,9 @@
 		<title><?php bloginfo('name'); ?></title>
 
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
-        <link href="<?php echo get_template_directory_uri(); ?>/img/favicon2.png" rel="shortcut icon">
-        <link href="<?php echo get_template_directory_uri(); ?>/img/favicon2.png" rel="apple-touch-icon-precomposed">
+        <link href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico" rel="icon" type="image/x-icon" />
+        <link href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico" rel="apple-touch-icon-precomposed" type="image/x-icon" />
 
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
