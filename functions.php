@@ -436,6 +436,8 @@ function custom_css() {
     wp_enqueue_style('search_css', get_template_directory_uri() . '/css/search.css');
     //mobile friendly
     wp_enqueue_style('responsive_css', get_template_directory_uri() . '/css/responsive.css');
+    //mailchimp css
+    wp_enqueue_style('mailchimp_css', get_template_directory_uri() . '/css/mailchimpformebed.css');
     //Adding bootstrap.js
     wp_enqueue_script( 'bootstrap.js', get_template_directory_uri() . '/js/bootstrap.js', array(), '1.0.0', true );
     //Adding jquery.js

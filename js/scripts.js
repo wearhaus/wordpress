@@ -15,6 +15,7 @@
            }
         })
         .resize();
+        
         var stickyHeaderTop = $('.stickyheader').offset().top - 16;
         console.log(stickyHeaderTop);
         $(window).scroll(function(){
@@ -54,7 +55,8 @@
                         
                 }
         });
-$(window).resize(function(){
+
+    $(window).resize(function(){
        console.log('resize called');
        var width = $(window).width();
        if(width <= 768){
