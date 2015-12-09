@@ -7,7 +7,7 @@
 	$currentFeature = 1;
 	$currentPost = 1;
 	$featureCount = 7;
-	$returnArray = array();
+	$return = array();
 
 	while ($currentFeature <= $featureCount) {
 		$original_query = $wp_query;
@@ -28,12 +28,11 @@
 		    }
 		}
 
-		array_push($returnArray, array(
-		"featured_" . $currentPost => array(
+		$return["featured_" . $currentPost] = array(
 			"title" => $title,
 			"url" => $url,
 			"img_url" => $thumb_url
-			)));
+		);
 
 		$currentPost++;
 
@@ -44,7 +43,7 @@
 	};
 
 //Creating JSON object
-$json = json_encode($returnArray);
+$json = json_encode($return);
 
 echo $json;
 
