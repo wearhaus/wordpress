@@ -1,8 +1,9 @@
 <?php 
 
-	header('Access-Control-Allow-Origin: *');
-	header('Access-Control-Allow-Methods: GET, POST');  
-	headers_list();
+	header('Content-type:application/json;charset=utf-8');
+	// header('Access-Control-Allow-Origin: *');
+	// header('Access-Control-Allow-Methods: GET, POST');  
+	// headers_list();
 
 	$currentFeature = 1;
 	$currentPost = 1;
