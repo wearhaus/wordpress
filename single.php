@@ -20,11 +20,13 @@
 										<span class="date"><?php the_time('F j, Y'); ?> <?php //the_time('g:i a'); ?></span>
 
 										<!-- post thumbnail -->	
+										<div>
 										<?php 
 											if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 												the_post_thumbnail('full');
 											} 
 										?>
+										</div>
 										<!-- /post thumbnail -->
 
 										<!--<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>-->
