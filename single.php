@@ -3,19 +3,6 @@
 <?php get_header(); ?>
 <body>
 	<div class="page-main" id="body-main">
-		<!-- post thumbnail -->	
-		<div class="container-fluid" >
-			<div class="row-fluid">
-				<div class="col-md-11" id="featured-image">
-					<?php 
-						if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-							the_post_thumbnail('full');
-						} 
-					?>
-				</div>
-			</div>
-		</div>
-		<!-- /post thumbnail -->
 		<div class="container-fluid">
 			<div class="row-fluid">
 				<div class="col-md-8 i5">
@@ -31,6 +18,16 @@
 
 										<h1 id="post_title"><?php the_title(); ?></h1>
 										<span class="date"><?php the_time('F j, Y'); ?> <?php //the_time('g:i a'); ?></span>
+
+										<!-- post thumbnail -->	
+										<div>
+										<?php 
+											if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+												the_post_thumbnail('full');
+											} 
+										?>
+										</div>
+										<!-- /post thumbnail -->
 
 										<!--<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>-->
 										<!--<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>-->

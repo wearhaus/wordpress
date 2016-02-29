@@ -1,51 +1,41 @@
-<?php 
+<?php
+/**
+ * The template for displaying pages
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages and that
+ * other "pages" on your WordPress site will use a different template.
+ *
+ * @package WordPress
+ * @subpackage Twenty_Sixteen
+ * @since Twenty Sixteen 1.0
+ */
 
-	header('Access-Control-Allow-Origin: *');
-	header('Access-Control-Allow-Methods: GET, POST');  
-	headers_list();
+get_header(); ?>
 
-	$currentFeature = 1;
-	$currentPost = 1;
-	$featureCount = 7;
-	$return = array();
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
+		<?php
+		// Start the loop.
+		while ( have_posts() ) : the_post();
 
-	while ($currentFeature <= $featureCount) {
-		$original_query = $wp_query;
-		$wp_query = null;
-		$args=array('posts_per_page'=>3, 'tag' => 'featured_' . $currentFeature);
-		$wp_query = new WP_Query( $args );
+			// Include the page content template.
+			get_template_part( 'template-parts/content', 'page' );
 
-		if ( have_posts() ) : while (have_posts()) : the_post();
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) {
+				comments_template();
+			}
 
-		$title = get_the_title();
-		$url = get_the_permalink(); 
-
-		if (function_exists('has_post_thumbnail')) {
-		    if ( has_post_thumbnail() ) {
-		    	$thumb_id = get_post_thumbnail_id();
-				$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'large', true);
-				$thumb_url = $thumb_url_array[0];
-		    }
-		}
-
-		$return["featured_" . $currentPost] = array(
-			"title" => $title,
-			"url" => $url,
-			"img_url" => $thumb_url
-		);
-
-		$currentPost++;
-
+			// End of the loop.
 		endwhile;
-		endif;
+		?>
 
-		$currentFeature++;
-	};
+	</main><!-- .site-main -->
 
-//Creating JSON object
-$json = json_encode($return);
+	<?php get_sidebar( 'content-bottom' ); ?>
 
-echo $json;
+</div><!-- .content-area -->
 
-
-?>
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>
