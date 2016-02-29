@@ -1,100 +1,41 @@
-<?php 
+<?php
+/**
+ * The template for displaying pages
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages and that
+ * other "pages" on your WordPress site will use a different template.
+ *
+ * @package WordPress
+ * @subpackage Twenty_Sixteen
+ * @since Twenty Sixteen 1.0
+ */
 
-	header('Access-Control-Allow-Origin: *');
-	header('Access-Control-Allow-Methods: GET, POST');  
-	headers_list();
-	//Featured Article 1
-	$original_query = $wp_query;
-	$wp_query = null;
-	$args=array('posts_per_page'=>1, 'tag' => 'featured_1');
-	$wp_query = new WP_Query( $args );
-	if ( have_posts() ) :
-					    while (have_posts()) : the_post();
-	$title_1 = get_the_title();
-	$url_1 = get_the_permalink(); 
+get_header(); ?>
 
-	if (function_exists('has_post_thumbnail')) {
-	    if ( has_post_thumbnail() ) {
-	    	$thumb_id = get_post_thumbnail_id();
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
+		<?php
+		// Start the loop.
+		while ( have_posts() ) : the_post();
 
+			// Include the page content template.
+			get_template_part( 'template-parts/content', 'page' );
 
-			$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'large', true);
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) {
+				comments_template();
+			}
 
-			$thumb_url_1 = $thumb_url_array[0];
-	    }
-	}
-	endwhile;
-	endif;
-	$wp_query = null;
-	$wp_query = $original_query;
+			// End of the loop.
+		endwhile;
+		?>
 
-	//Featured Article 2
-	$original_query = $wp_query;
-	$wp_query = null;
-	$args=array('posts_per_page'=>1, 'tag' => 'featured_2');
-	$wp_query = new WP_Query( $args );
-	if ( have_posts() ) :
-					    while (have_posts()) : the_post();
-	$title_2 = get_the_title();
-	$url_2 = get_the_permalink(); 
-	if (function_exists('has_post_thumbnail')) {
-	    if ( has_post_thumbnail() ) {
-	    	$thumb_id = get_post_thumbnail_id();
-			$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'large', true);
-			$thumb_url_2 = $thumb_url_array[0];
-	    }
-	}
-	endwhile;
-	endif;
-	$wp_query = null;
-	$wp_query = $original_query;
-	//Featured Article 3
-	$original_query = $wp_query;
-	$wp_query = null;
-	$args=array('posts_per_page'=>1, 'tag' => 'featured_3');
-	$wp_query = new WP_Query( $args );
-	if ( have_posts() ) :
-					    while (have_posts()) : the_post();
-	$title_3 = get_the_title();
-	$url_3 = get_the_permalink(); 
-	if (function_exists('has_post_thumbnail')) {
-	    if ( has_post_thumbnail() ) {
-	    	$thumb_id = get_post_thumbnail_id();
-			$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'large', true);
-			$thumb_url_3 = $thumb_url_array[0];
-	    }
-	}
-	endwhile;
-	endif;
-	$wp_query = null;
-	$wp_query = $original_query;
+	</main><!-- .site-main -->
 
-//Creating JSON object
-$json = json_encode(array(
+	<?php get_sidebar( 'content-bottom' ); ?>
 
-     "featured_1" => array(
+</div><!-- .content-area -->
 
-        "title" => $title_1,
-        "url" => $url_1,
-        "img_url" => $thumb_url_1
-     ),
-
-     "featured_2" => array(
-
-        "title" => $title_2,
-        "url" => $url_2,
-        "img_url" => $thumb_url_2
-     ),
-
-     "featured_3" => array(
-
-        "title" => $title_3,
-        "url" => $url_3,
-        "img_url" => $thumb_url_3
-     )
-));
-
-echo $json;
-
-
-?>
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>
