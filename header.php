@@ -80,7 +80,7 @@
                 <a class="navbar-brand" href="http://www.wearhaus.com"><img alt="Brand" src="<?php bloginfo('stylesheet_directory'); ?>/img/logo_white_transparent_high_res.png"></a>
                 <div id="navbar-order-now-link-mobile-container">
                     <a href="http://store.wearhaus.com" id="order_now_link_mobile">
-                        Order Now
+                        Buy Now
                     </a>
                 </div>
             </div>
@@ -92,7 +92,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="http://www.wearhaus.com/ourstory">Our Story</a>
+                        <a href="http://www.wearhaus.com/about">About</a>
                     </li>
                     <li class="page-scroll">
                         <a href="http://blog.wearhaus.com">Blog</a>
@@ -104,7 +104,7 @@
                         <a href="https://wearhaus.zendesk.com/hc/en-us" target="_blank">Support</a>
                     </li>
                     <li class="page-scroll" id="order_now">
-                        <a href="http://store.wearhaus.com" id="order_now_link">Order Now</a>
+                        <a href="http://store.wearhaus.com" id="order_now_link">Buy Now</a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right collapse-blog">
